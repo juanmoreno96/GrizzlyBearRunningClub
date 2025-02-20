@@ -1,7 +1,5 @@
-import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
-
 
 const JoinUs = () => {
   return (
@@ -17,7 +15,7 @@ const JoinUs = () => {
             Grizzly Bear Running Club started with a simple drawing of a bear with a backpack and a newfound love for running and hiking. What began as just an idea soon became a community built on adventure, perseverance, and the joy of movement.
           </p>
           <p className="text-left leading-loose">
-            We may not be the fastest on the trails, but we believe in welcoming everyone—whether you're sprinting up mountains or taking it one step at a time. Join us as we explore the outdoors, embrace the challenge, and grow together, one run and hike at a time.
+            We may not be the fastest on the trails, but we believe in welcoming everyone—whether youre sprinting up mountains or taking it one step at a time. Join us as we explore the outdoors, embrace the challenge, and grow together, one run and hike at a time.
           </p>
         </div>
         <div className="md:w-1/2 flex justify-center">
@@ -50,19 +48,19 @@ const JoinUs = () => {
           <h2 className="text-3xl font-bold mb-4">Connect with Us</h2>
           <ul className="space-y-4">
             <li>
-              <Link href="https://www.facebook.com" legacyBehavior>
-                <a className="text-blue-500 hover:underline">Facebook</a>
-              </Link>
+              <a href="https://www.facebook.com" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                Facebook
+              </a>
             </li>
             <li>
-              <Link href="https://www.twitter.com" legacyBehavior>
-                <a className="text-blue-400 hover:underline">Twitter</a>
-              </Link>
+              <a href="https://www.twitter.com" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">
+                Twitter
+              </a>
             </li>
             <li>
-              <Link href="https://www.instagram.com" legacyBehavior>
-                <a className="text-pink-500 hover:underline">Instagram</a>
-              </Link>
+              <a href="https://www.instagram.com" className="text-pink-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                Instagram
+              </a>
             </li>
           </ul>
         </div>

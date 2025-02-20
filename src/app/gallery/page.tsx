@@ -1,5 +1,4 @@
 // page.tsx
-import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import GridGallary from "../components/gridGallary";
