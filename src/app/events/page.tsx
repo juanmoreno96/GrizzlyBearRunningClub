@@ -7,7 +7,7 @@ const Events = () => {
     <div className="min-h-screen flex flex-col bg-rose-950/30 text-white">
       <Navbar />
 
-      <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/Events-banner.jpg')] opacity-40"></div>
+      <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/events-banner.jpg')] opacity-40"></div>
 
       <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
         <div className="md:w-1/2 flex justify-center p-6">
