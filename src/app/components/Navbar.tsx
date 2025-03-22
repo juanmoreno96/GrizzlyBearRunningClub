@@ -17,7 +17,9 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-md py-4 px-6 flex justify-between items-center text-white z-50">
-      <h1 className="text-2xl font-bold">Grizzly Bear Running Club</h1>
+      <Link href="/" className="text-2xl font-bold">
+        Grizzly Bear Running Club
+      </Link>
 
       {/* Hamburger Menu (Mobile) */}
       <input type="checkbox" id="menu-toggle" className="peer hidden" />

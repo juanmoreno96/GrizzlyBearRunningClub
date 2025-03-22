@@ -11,7 +11,7 @@ const Events = () => {
 
       <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
         <div className="md:w-1/2 flex justify-center p-6">
-          <Image src="https://vdbtnhct9do3gpjg.public.blob.vercel-storage.com/events/juanjuanrun-PehtLLY3uZLD36n24wlFwVSS08NYnE.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
+          <Image src="/gallery/events/juanjuanrun.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
         </div>
         <div className="md:w-1/2 md:ml-6 text-center bg-black/10 backdrop-blur-md p-6">
           <h2 className="text-3xl text-center font-bold mb-4 underline">Past Events</h2>

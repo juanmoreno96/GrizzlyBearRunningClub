@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const GridGallary = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-screen-2xl mx-auto p-20">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-screen-2xl mx-auto p-20">
       {Object.entries(galleryMerch).map(([key, src], index) => (
         <div key={index} className="grid gap-4">
           <div>

@@ -15,7 +15,7 @@ const Gallery = () => {
             </div>
           </Link>
           <Image
-            src="https://vdbtnhct9do3gpjg.public.blob.vercel-storage.com/community/johnycarlos-1gTj9k6PSnKscNovjK4HRSawp1O4XX.jpg"
+            src="/gallery/community/johnycarlos.jpg"
             alt="Community"
             fill
             style={{ objectFit: "cover" }}
@@ -29,7 +29,7 @@ const Gallery = () => {
             </div>
           </Link>
           <Image
-            src="https://vdbtnhct9do3gpjg.public.blob.vercel-storage.com/events/477042486_659149196830259_7450223642701792381_n-QrtNZk3KlLKs76zyvUEMOJDwILOTnW.jpg"
+            src="/gallery/events/477042486_659149196830259_7450223642701792381_n.jpg"
             alt="Events"
             fill
             style={{ objectFit: "cover" }}
@@ -43,7 +43,7 @@ const Gallery = () => {
             </div>
           </Link>
           <Image
-            src="https://vdbtnhct9do3gpjg.public.blob.vercel-storage.com/merch/merchvtwo-LQCO3svk2LiAJz2M62sy4pHinTWUg2.jpg"
+            src="/gallery/merch/merchvtwo.jpg"
             alt="Merch/Designs"
             fill
             style={{ objectFit: "cover" }}
@@ -57,7 +57,7 @@ const Gallery = () => {
             </div>
           </Link>
           <Image
-            src="https://vdbtnhct9do3gpjg.public.blob.vercel-storage.com/trails/bear%20one-IYuFNOQOTupduk2vuXEpWRMy92PnGh.jpg"
+            src="/gallery/trails/bear%20one.jpg"
             alt="Trails"
             fill
             style={{ objectFit: "cover" }}

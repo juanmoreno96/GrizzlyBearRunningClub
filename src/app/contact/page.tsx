@@ -20,7 +20,7 @@ const JoinUs = () => {
           </p>
         </div>
         <div className="md:w-1/2 flex justify-center">
-          <Image src="https://vdbtnhct9do3gpjg.public.blob.vercel-storage.com/community/trioOg-5eE5bv4euM5yMMzCAV9VtrBaZWGKFJ.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
+          <Image src="/gallery/community/trioOg.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
         </div>
       </div>
       <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
@@ -43,7 +43,7 @@ const JoinUs = () => {
 
       <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 flex-grow max-w-screen-2xl mx-auto">
         <div className="md:w-1/2 flex justify-center">
-          <Image src="https://vdbtnhct9do3gpjg.public.blob.vercel-storage.com/merch/merchvtwo-LQCO3svk2LiAJz2M62sy4pHinTWUg2.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600}/>
+          <Image src="/gallery/merch/merchvtwo.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600}/>
         </div>
         <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6 text-center bg-black/10 backdrop-blur-md md:text-center">
           <h2 className="text-3xl font-bold mb-4">Connect with Us</h2>
