@@ -1,14 +1,46 @@
+"use client";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import LoadingThreeDotsJumping from "../components/LoadingThreeDotsJumping"; // Import the loading dots component
+
 
 const Tips = () => {
+  const [isLoading, setIsLoading] = useState(true); // State to track loading
+
+  useEffect(() => {
+    // Wait for all resources to load with a minimum delay
+    const handleLoad = () => {
+      setTimeout(() => {
+        setIsLoading(false); // Set loading to false after everything is loaded
+      }, 500); // Minimum wait of half a second
+    };
+
+    if (document.readyState === "complete") {
+      // If the page is already loaded
+      handleLoad();
+    } else {
+      // Add event listener for when the page finishes loading
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => {
+      window.removeEventListener("load", handleLoad); // Cleanup event listener
+    };
+  }, []);
   return (
     <div className="min-h-screen flex flex-col bg-rose-950/30 text-white">
-      
-      <Navbar />
-      <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/home-banner.jpg')] opacity-40"></div>
-      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-20 z-10 max-w-screen-2xl mx-auto">
+      {isLoading ? (
+        // Loading dots animation
+        <div className="fixed inset-0 flex flex-col items-center justify-center bg-rose-950 z-50">
+          <Navbar />
+          <LoadingThreeDotsJumping />
+        </div>
+      ) : ( <>  
+
+<div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/home-banner.jpg')] opacity-40"></div>
+      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 z-10 max-w-screen-2xl mx-auto">
         <div className="col-span-2 w-full max-w-screen-2xl mx-auto p-6 bg-white shadow-lg rounded-xl">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Training Plan: The Key to Success</h2>
           <p className="text-gray-600 mb-6">
@@ -43,13 +75,13 @@ const Tips = () => {
           </p>
         </div>
         <div className="w-full max-w-screen-2xl mx-auto p-6">
-          <Image src="/gallery/johnyRuuning.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
+          <Image src="/gallery/community/juanLunaWoods.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
         </div>
       </div>
 
       <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
 
-      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-20 max-w-screen-2xl mx-auto">
+      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
         <div className="w-full max-w-screen-2xl mx-auto p-6">
           <Image src="/gallery/johnyRuuning.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
         </div>
@@ -168,6 +200,8 @@ const Tips = () => {
          </div>
       </div>
       <Footer />
+      </>)}
+      
     </div>
   );
 };

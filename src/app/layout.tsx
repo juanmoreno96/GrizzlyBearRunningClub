@@ -2,8 +2,6 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -21,7 +19,6 @@ const geistMono = Geist_Mono({
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const pathname = usePathname();
 
   useEffect(() => {
     document.body.setAttribute("data-loaded", "true");
@@ -35,20 +32,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         <div className="bg-rose-950/30"></div>
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={pathname}
-            initial={{ opacity: 0, y: 50 }}  // Start off-screen and transparent
-            animate={{ opacity: 1, y: 0 }}   // Slide in and become opaque
-            exit={{ opacity: 0, y: -50 }}    // Slide out and become transparent
-            transition={{ duration: 0.2, ease: [0.25, 0.8, 0.25, 1] }}
-            style={{ position: "absolute", width: "100%", height: "100%" }}  // Fix positioning
-          >
-            {children}
-          </motion.div>
-        </AnimatePresence>
-
-
+        <div style={{ position: "absolute", width: "100%", height: "100%" }}>
+          {children}
+        </div>
         <Analytics />
       </body>
     </html>

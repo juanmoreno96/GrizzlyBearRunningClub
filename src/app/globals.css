@@ -47,6 +47,21 @@ body {
   overflow-y: scroll; /* Always show vertical scrollbar */
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff; /* White dots */
+  will-change: transform;
+}
+
 
 
 
