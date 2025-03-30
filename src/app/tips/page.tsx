@@ -40,7 +40,7 @@ const Tips = () => {
       ) : ( <>  
 
 <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/home-banner.jpg')] opacity-40"></div>
-      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 z-10 max-w-screen-2xl mx-auto">
+      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 z-10 mt-24 max-w-screen-2xl mx-auto">
         <div className="col-span-2 w-full max-w-screen-2xl mx-auto p-6 bg-white shadow-lg rounded-xl">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Training Plan: The Key to Success</h2>
           <p className="text-gray-600 mb-6">
