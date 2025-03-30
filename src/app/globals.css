@@ -32,20 +32,6 @@ body[data-loaded="true"] {
 .glow-on-hover:hover {
   box-shadow: 0 0 20px rgba(238, 92, 92, 0.8);
 }
-/* Hide scrollbar for all elements except the body */
-*::-webkit-scrollbar {
-  display: none;
-}
-
-* {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-/* Custom scrollbar style for the body */
-body {
-  overflow-y: scroll; /* Always show vertical scrollbar */
-}
 
 .container {
   display: flex;
