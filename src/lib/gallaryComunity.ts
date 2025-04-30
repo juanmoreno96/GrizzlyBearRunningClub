@@ -1,4 +1,5 @@
 export const galleryImages: Record<string, { src: string, width: number, height: number }> = {
+  img0: { src: "/gallery/community/bearfamilycasa5kccomun.jpg", width: 800, height: 600 },
   img1: { src: "/gallery/community/479516505_632810909154728_9215783616045434829_n.jpg", width: 800, height: 600 },
   img2: { src: "/gallery/community/DSC00484.jpg", width: 800, height: 600 },
   img3: { src: "/gallery/community/trioOg.jpg", width: 800, height: 600 },

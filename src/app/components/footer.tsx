@@ -7,9 +7,6 @@ const Footer = () => {
         
         {/* Social Links Section */}
         <div className="flex space-x-4">
-          <a href="https://www.facebook.com" className="text-blue-500 hover:underline">Facebook</a>
-          <a href="https://www.twitter.com" className="text-blue-400 hover:underline">Twitter</a>
-          <a href="https://www.instagram.com" className="text-pink-500 hover:underline">Instagram</a>
         </div>
         <p>Build by people from Laredo Tx</p>
       </div>

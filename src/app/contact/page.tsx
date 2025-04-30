@@ -79,23 +79,13 @@ const JoinUs = () => {
             <div className="md:w-1/2 flex justify-center">
               <Image src="/gallery/merch/merchvtwo.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
             </div>
-            <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6 text-center bg-black/10 backdrop-blur-md md:text-center">
+            <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6 text-center bg-black/10 backdrop-blur-md md:text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Connect with Us</h2>
               <ul className="space-y-4">
                 <li>
-                  <a href="https://www.facebook.com" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.twitter.com" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com" className="text-pink-500 hover:underline" target="_blank" rel="noopener noreferrer">
-                    Instagram
-                  </a>
+                    <a href="https://www.instagram.com/grizzlybear_runningclub/" className="text-pink-500 hover:underline text-2xl" target="_blank" rel="noopener noreferrer">
+                    Instagram: @grizzlybear_runningclub
+                    </a>
                 </li>
               </ul>
             </div>
