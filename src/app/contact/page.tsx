@@ -31,7 +31,7 @@ const JoinUs = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-rose-950/30 text-white">
+    <div className="min-h-screen flex flex-col bg-rose-950 text-white">
       {isLoading ? (
         // Replace the existing loading animation with the new component
         <div className="fixed inset-0 flex flex-col items-center justify-center bg-rose-950 z-50">
@@ -41,7 +41,7 @@ const JoinUs = () => {
       ) : (
         // Main content
         <>
-          <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/lunaEars.jpg')] opacity-40"></div>
+          <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/lunaEars.jpg')] opacity-80"></div>
 
           <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
             <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6 text-center bg-black/10 backdrop-blur-md md:text-center p-5">

@@ -30,8 +30,27 @@ const Events = () => {
     };
   }, []);
 
+  type LeaderboardTab = "5k" | "10k" | "halfMarathon" | "marathon"; // Define valid keys
+  const [activeTab, setActiveTab] = useState<LeaderboardTab>("5k"); // State to track active tab
+  const leaderboardData: Record<LeaderboardTab, { name: string; time: string; event: string; place: string }[]> = {
+    "5k": [
+      { name: "Juan B", time: "28:18", event: "CASA Superhero Run", place: "Laredo Tx" },
+      { name: "Juan M", time: "54:57", event: "CASA Superhero Run", place: "Laredo Tx" },
+      { name: "Carlos D", time: "59:29", event: "Run George Run" , place: "Laredo TX" },
+    ],
+    "10k": [
+      
+    ],
+    "halfMarathon": [
+      
+    ],
+    "marathon": [
+      
+    ],
+  };
+
   return (
-    <div className="min-h-screen flex flex-col bg-rose-950/30 text-white">
+    <div className="min-h-screen flex flex-col bg-rose-950 text-white">
       {isLoading ? (
         // Loading spinner
         <div className="fixed inset-0 flex items-center justify-center bg-rose-950 z-50">
@@ -43,7 +62,7 @@ const Events = () => {
         <>
           
 
-          <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/events-banner.jpg')] opacity-40"></div>
+          <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/events-banner.jpg')] opacity-80"></div>
 
           <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
             <div className="md:w-1/2 flex justify-center p-6">
@@ -71,6 +90,45 @@ const Events = () => {
               <ul className="list-disc list-inside text-left space-y-2">
                 <li className="text-lg">Back the Blue 5k 10k – May 10, 2025</li>
               </ul>
+            </div>
+          </div>
+          <div className="relative flex flex-col items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
+            <h2 className="text-3xl text-center font-bold mb-4 underline">Leaderboard</h2>
+            <div className="w-full bg-black/10 backdrop-blur-md p-6 rounded-lg shadow-lg">
+              <div className="flex justify-center mb-4">
+                <button className="px-4 py-2 mx-2 bg-rose-800 text-white rounded hover:bg-rose-700" onClick={() => setActiveTab("5k")}>
+                  5K
+                </button>
+                <button className="px-4 py-2 mx-2 bg-rose-800 text-white rounded hover:bg-rose-700" onClick={() => setActiveTab("10k")}>
+                  10K
+                </button>
+                <button className="px-4 py-2 mx-2 bg-rose-800 text-white rounded hover:bg-rose-700" onClick={() => setActiveTab("halfMarathon")}>
+                  Half Marathon
+                </button>
+                <button className="px-4 py-2 mx-2 bg-rose-800 text-white rounded hover:bg-rose-700" onClick={() => setActiveTab("marathon")}>
+                  Marathon
+                </button>
+              </div>
+              <table className="table-auto w-full text-left text-white">
+                <thead>
+                  <tr>
+                    <th className="px-4 py-2 border-b border-rose-700">Name</th>
+                    <th className="px-4 py-2 border-b border-rose-700">Time</th>
+                    <th className="px-4 py-2 border-b border-rose-700">Event</th>
+                    <th className="px-4 py-2 border-b border-rose-700">Place</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {leaderboardData[activeTab].map((entry, index) => (
+                    <tr key={index} className="hover:bg-rose-800">
+                      <td className="px-4 py-2 border-b border-rose-700">{entry.name}</td>
+                      <td className="px-4 py-2 border-b border-rose-700">{entry.time}</td>
+                      <td className="px-4 py-2 border-b border-rose-700">{entry.event}</td>
+                      <td className="px-4 py-2 border-b border-rose-700">{entry.place}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
 

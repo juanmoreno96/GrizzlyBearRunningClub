@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-rose-950/50 text-white py-6 mt-auto relative z-50">
+    <footer className="bg-red-950 text-white py-6 mt-auto relative z-50">
       <div className="container mx-auto text-center flex flex-col items-center">
         {/* Copyright Section */}
         <p>&copy; {new Date().getFullYear()} Grizzly Bear Running Club. All rights reserved.</p>

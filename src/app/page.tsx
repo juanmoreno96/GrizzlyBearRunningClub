@@ -31,7 +31,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-rose-950/30">
+    <div className="relative min-h-screen bg-rose-950">
       {isLoading ? (
         // Loading dots animation
         <div className="fixed inset-0 flex flex-col items-center justify-center bg-rose-950 z-50">
@@ -43,7 +43,7 @@ export default function Home() {
         <>
           <Navbar />
 
-          <div className="absolute inset-0 bg-cover bg-center bg-[url('/bannerPhotos/running-hero.jpg')] opacity-40"></div>
+          <div className="absolute inset-0 bg-cover bg-center bg-[url('/bannerPhotos/running-hero.jpg')] opacity-80"></div>
 
           <div className="relative flex flex-col items-center justify-center min-h-screen text-center text-white px-6">
             <h1 className="text-5xl md:text-6xl font-bold">Run Together, Stay Strong</h1>

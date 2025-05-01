@@ -31,7 +31,7 @@ const Community = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-rose-950/30 text-white">
+    <div className="min-h-screen flex flex-col bg-rose-950 text-white">
       {isLoading ? (
         // Loading dots animation
         <div className="fixed inset-0 flex flex-col items-center justify-center bg-rose-950 z-50">
