@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import LoadingThreeDotsJumping from "../components/LoadingThreeDotsJumping"; // Import the new loading component
+import Head from "next/head";
 
 const JoinUs = () => {
   const [isLoading, setIsLoading] = useState(true); // State to track loading
@@ -31,6 +32,28 @@ const JoinUs = () => {
   }, []);
 
   return (
+    <>
+    <Head>
+      <title>Join the Grizzly Bear Running Club | Our Story & How to Connect</title>
+      <meta
+      name="description"
+      content="Learn more about the Grizzly Bear Running Club, our community story, and how you can join us for runs, hikes, and good vibes in Laredo, Texas."
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charSet="UTF-8" />
+
+      {/* Open Graph (OG) Tags for Social Sharing */}
+      <meta property="og:title" content="Join the Grizzly Bear Running Club" />
+      <meta
+      property="og:description"
+      content="Discover how our community began and find out how to join our running events in Laredo, TX."
+      />
+      <meta
+      property="og:url"
+      content="https://grizzlybearrunningclub.com/contact"
+      />
+      <meta property="og:type" content="website" />
+    </Head>
     <div className="min-h-screen flex flex-col bg-rose-950 text-white">
       {isLoading ? (
         // Replace the existing loading animation with the new component
@@ -41,9 +64,9 @@ const JoinUs = () => {
       ) : (
         // Main content
         <>
-          <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/lunaEars.jpg')] opacity-80"></div>
-
-          <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
+          <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/lunaEars.jpg')] opacity-80 "></div>
+          <div className="bg-diagonal-stripes">
+            <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
             <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6 text-center bg-black/10 backdrop-blur-md md:text-center p-5">
               <h1 className="text-3xl font-bold mb-4">Our Story</h1>
               <p className="text-left leading-loose">
@@ -90,11 +113,15 @@ const JoinUs = () => {
               </ul>
             </div>
           </div>
+          </div>
+          
 
           <Footer />
         </>
       )}
     </div>
+    </>
+    
   );
 };
 

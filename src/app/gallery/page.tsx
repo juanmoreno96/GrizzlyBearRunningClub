@@ -43,7 +43,7 @@ const Gallery = () => {
         // Main content
         <>
           <Navbar />
-          <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 p-20">
+          <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 p-20 bg-diagonal-stripes">
             <div className="relative aspect-w-1 aspect-h-1 glow-on-hover">
               <Link href="/gallery/community" passHref>
                 <div className="absolute w-full h-full flex items-center justify-center text-center z-10">

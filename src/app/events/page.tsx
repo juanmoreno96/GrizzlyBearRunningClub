@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import LoadingThreeDotsJumping from "../components/LoadingThreeDotsJumping";
+import Head from "next/head";
 
 const Events = () => {
   const [isLoading, setIsLoading] = useState(true); // State to track loading
@@ -50,7 +51,31 @@ const Events = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-rose-950 text-white">
+    <> 
+
+<Head>
+  <title>Grizzly Bear Running Club | Events & Leaderboard</title>
+  <meta
+    name="description"
+    content="Explore upcoming and past Grizzly Bear Running Club events, and check out our running leaderboard to see top performances in 5K, 10K, and more!"
+  />
+  <meta charSet="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {/* Open Graph for social media */}
+  <meta property="og:title" content="Grizzly Bear Running Club | Events & Leaderboard" />
+  <meta
+    property="og:description"
+    content="Join the Grizzly Bear Running Club events and view top runners in our community leaderboard."
+  />
+  <meta
+    property="og:image"
+    content="https://grizzlybearrunningclub.com/bannerPhotos/events-banner.jpg"
+  />
+  <meta property="og:url" content="https://grizzlybearrunningclub.com/events" />
+  <meta property="og:type" content="website" />
+</Head>
+     <div className="min-h-screen flex flex-col bg-rose-950 text-white">
       {isLoading ? (
         // Loading spinner
         <div className="fixed inset-0 flex items-center justify-center bg-rose-950 z-50">
@@ -63,8 +88,8 @@ const Events = () => {
           
 
           <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/events-banner.jpg')] opacity-80"></div>
-
-          <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
+          <div className="bg-diagonal-stripes">
+            <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
             <div className="md:w-1/2 flex justify-center p-6">
               <Image src="/gallery/events/runningBearthreecasa5k.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
             </div>
@@ -88,7 +113,7 @@ const Events = () => {
             <div className="md:w-1/2 md:ml-6 text-center bg-black/10 backdrop-blur-md p-6">
               <h2 className="text-3xl text-center font-bold mb-4 underline">Future Events</h2>
               <ul className="list-disc list-inside text-left space-y-2">
-                <li className="text-lg">Back the Blue 5k 10k – May 10, 2025</li>
+                
               </ul>
             </div>
           </div>
@@ -131,11 +156,15 @@ const Events = () => {
               </table>
             </div>
           </div>
+          </div>
+          
 
           <Footer />
         </>
       )}
     </div>
+    </>
+    
   );
 };
 

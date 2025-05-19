@@ -14,6 +14,7 @@ export default function Navbar() {
     { name: "Gallery", path: "/gallery" },
     { name: "Events", path: "/events" },
     { name: "Tips", path: "/tips" },
+    { name: "Blog", path: "/blog" },
     { name: "Join Us", path: "/contact" },
   ];
 
