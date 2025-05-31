@@ -2,7 +2,7 @@ import AthleticsVideoGallery from "../components/athleticsVideoGallery";
 import Image from "next/image";
 const Athletics = () => {
   return (
-    <div >
+    <div className="bg-stone-950 text-white">
 
         <div className="">
           <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
