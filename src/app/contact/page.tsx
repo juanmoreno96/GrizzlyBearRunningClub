@@ -84,6 +84,7 @@ const JoinUs = () => {
 
           <div className="relative w-full h-96 mt-12 max-w-screen-2xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Join us in our runs</h2>
+            <h3 className="mb-4">Laredo, TX</h3>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7071.515790563925!2d-99.47216621602932!3d27.601034662518988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866120a0e58514df%3A0x71da9bd4c3366a59!2sNorth%20Central%20Park!5e0!3m2!1sen!2sus!4v1739734318047!5m2!1sen!2sus"
               width="100%"
@@ -95,6 +96,20 @@ const JoinUs = () => {
               tabIndex={0}
             ></iframe>
           </div>
+            <div className="relative w-full h-96 mt-16 max-w-screen-2xl mx-auto">
+            <h3 className="mb-4">Round Rock, TX</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1718.262874972042!2d-97.62584750520374!3d30.53444670403131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644d08a6a9e92f7%3A0x121c91cd8529a794!2sVirgil%20Rabb%20Pavilion!5e0!3m2!1sen!2sus!4v1757206662661!5m2!1sen!2sus"
+              width="100%"
+              height="90%"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              aria-hidden="false"
+              tabIndex={0}
+            ></iframe>
+            </div>
+            <div className="my-16"></div>
 
           <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
 
@@ -108,6 +123,11 @@ const JoinUs = () => {
                 <li>
                     <a href="https://www.instagram.com/grizzlybear_runningclub/" className="text-pink-500 hover:underline text-2xl" target="_blank" rel="noopener noreferrer">
                     Instagram: @grizzlybear_runningclub
+                    </a>
+                </li>
+                <li>
+                  <a href="https://www.strava.com/clubs/1689981" className="text-orange-600 hover:underline text-2xl" target="_blank" rel="noopener noreferrer">
+                    Strava: Grizzly Bear Running Club
                     </a>
                 </li>
               </ul>
