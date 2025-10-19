@@ -46,7 +46,7 @@ export default function Home() {
         <meta charSet="UTF-8" />
       </Head>
       
-      <div className="relative min-h-screen">
+      <div className="relative">
         {isLoading ? (
           // Loading dots animation
           <div className="fixed inset-0 flex flex-col items-center justify-center bg-rose-950 z-50">
@@ -57,7 +57,7 @@ export default function Home() {
           // Main content
           <>
             <Navbar />
-            <div className="relative min-h-screen">
+            <div className="relative">
                 <div className="fixed inset-0 w-full h-full ">
                 <Image
                   src="/bannerPhotos/running-hero.jpg"
@@ -75,7 +75,7 @@ export default function Home() {
 
             <div className="relative flex flex-col items-center justify-center min-h-screen text-center text-white px-6 z-20">
               <h1 className="text-5xl md:text-6xl font-bold">Run Together, Stay Strong</h1>
-              <p className="mt-4 text-lg md:text-xl text-gray-300">
+              <p className="mt-4 text-lg md:text-xl text-white">
                 Join our running community and push your limits!
               </p>
               <Link href="/contact" passHref>
