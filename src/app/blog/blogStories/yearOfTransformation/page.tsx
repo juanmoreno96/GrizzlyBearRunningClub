@@ -4,7 +4,7 @@ import Footer from "../../../components/footer";
 
 const yearOftransformation = () => {
   return (
-    <div className='bg-rose-950 bg-diagonal-stripes'>
+    <div className='bg-rose-950 bg-diagonal-stripes mt-24'>
     <h2 id= "yearOftransformation"className="text-3xl text-center font-bold mb-4">A Year of Transformation (March 23, 2025)</h2>
           <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
             <div className="w-full max-w-screen-2xl mx-auto p-6">

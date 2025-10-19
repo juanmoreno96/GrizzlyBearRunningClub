@@ -4,7 +4,7 @@ import Footer from "../../../components/footer";
 
 const mysecond5k = () => {
     return (
-        <div className='bg-rose-950 bg-diagonal-stripes'>
+        <div className='bg-rose-950 bg-diagonal-stripes mt-24'>
             <h2 id="mysecond5k" className="text-3xl text-center font-bold mb-4">My Second 5K Race: Chasing the Hour (April 26, 2025)</h2>
               <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
                 <div className="w-full max-w-screen-2xl mx-auto p-6 flex items-center justify-center bg-transparent">
