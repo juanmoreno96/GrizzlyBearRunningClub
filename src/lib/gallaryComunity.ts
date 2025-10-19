@@ -1,15 +1,17 @@
-export const galleryImages: Record<string, { src: string, width: number, height: number }> = {
-  img0: { src: "/gallery/community/bearfamilycasa5kccomun.jpg", width: 800, height: 600 },
-  img1: { src: "/gallery/community/479516505_632810909154728_9215783616045434829_n.jpg", width: 800, height: 600 },
-  img2: { src: "/gallery/community/DSC00484.jpg", width: 800, height: 600 },
-  img3: { src: "/gallery/community/trioOg.jpg", width: 800, height: 600 },
-  img4: { src: "/gallery/community/johnyrockfifek.jpg", width: 800, height: 600 },
-  img5: { src: "/gallery/community/johnycarlos.jpg", width: 800, height: 600 },
-  img6: { src: "/gallery/community/carlosBearWoods.jpg", width: 800, height: 600 },
-  img7: { src: "/gallery/community/littleBrow.jpg", width: 800, height: 600 },
-  img8: { src: "/gallery/community/lunaEars.jpg", width: 800, height: 600 },
-  img9: { src: "/gallery/community/lunaWater.jpg", width: 800, height: 600 },
-  img10: { src: "/gallery/community/johnyRuuning.jpg", width: 800, height: 600 },
-  img11: { src: "/gallery/community/juanLunaWoods.jpg", width: 800, height: 600 },
-  img12: { src: "/gallery/community/memissing.jpg", width: 800, height: 600 },
-};
+export const galleryCommunity: { id: string; src: string; alt: string; width: number; height: number }[] = [
+  { id: "imgC22", src: "/gallery/community/bearfamilycasa5kccomun.jpg", alt: "Family of runners together before the race", width: 800, height: 600 },
+  { id: "imgC1", src: "/gallery/community/479516505_632810909154728_9215783616045434829_n.jpg", alt: "Group photo from a community run", width: 800, height: 600 },
+  { id: "imgC2", src: "/gallery/community/DSC00484.jpg", alt: "Runners on a shaded trail", width: 800, height: 600 },
+  { id: "imgC3", src: "/gallery/community/trioOg.jpg", alt: "Three runners posing together", width: 800, height: 600 },
+  { id: "imgC4", src: "/gallery/community/johnyrockfifek.jpg", alt: "Runner celebrating a finish line moment", width: 800, height: 600 },
+  { id: "imgC5", src: "/gallery/community/johnycarlos.jpg", alt: "Two club members smiling after a run", width: 800, height: 600 },
+  { id: "imgC6", src: "/gallery/community/carlosBearWoods.jpg", alt: "Runner heading into the woods", width: 800, height: 600 },
+  { id: "imgC7", src: "/gallery/community/littleBrow.jpg", alt: "Close-up portrait of a young runner", width: 800, height: 600 },
+  { id: "imgC8", src: "/gallery/community/lunaEars.jpg", alt: "Runner with a scenic background", width: 800, height: 600 },
+  { id: "imgC9", src: "/gallery/community/lunaWater.jpg", alt: "Runner being handed water during the event", width: 800, height: 600 },
+  { id: "imgC10", src: "/gallery/community/johnyRuuning.jpg", alt: "Runner mid-stride on a sunny day", width: 800, height: 600 },
+  { id: "imgC11", src: "/gallery/community/juanLunaWoods.jpg", alt: "Two runners enjoying a woodland trail", width: 800, height: 600 },
+  { id: "imgC12", src: "/gallery/community/memissing.jpg", alt: "Community run candid moment", width: 800, height: 600 },
+];
+
+export default galleryCommunity;

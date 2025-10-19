@@ -35,7 +35,7 @@ const Events = () => {
   const [activeTab, setActiveTab] = useState<LeaderboardTab>("5k"); // State to track active tab
   const leaderboardData: Record<LeaderboardTab, { name: string; time: string; event: string; place: string }[]> = {
     "5k": [
-      { name: "Juan B", time: "28:18", event: "CASA Superhero Run", place: "Laredo Tx" },
+      { name: "Juan B", time: "25:45", event: "TAMIU Zombie Run", place: "Laredo Tx" },
       { name: "Juan M", time: "54:57", event: "CASA Superhero Run", place: "Laredo Tx" },
       { name: "Carlos D", time: "59:29", event: "Run George Run" , place: "Laredo TX" },
     ],
@@ -57,6 +57,8 @@ const pastEventsByYear: Record<string, string[]> = {
   "2025": [
     "Run George Run 5K – February 3, 2025",
     "CASA Superhero Run – April 26, 2025",
+    "TAMIU Zombie Run – October 11, 2025",
+    "Steps Forward 5K – October 19, 2025",
   ],
   "2024": [
     "Zombie Run – October 12, 2024",
@@ -144,9 +146,10 @@ return (
             <div className="md:w-1/2 md:ml-6 text-center bg-black/10 backdrop-blur-md p-6">
               <h2 className="text-3xl text-center font-bold mb-4 underline">Future Events</h2>
               <ul className="list-disc list-inside text-left space-y-2">
-                <li className="text-lg">Zombie Run – October 2025</li>
-                <li className="text-lg">Día de Los Muertos 5K – November 2, 2025</li>
+                <li className="text-lg">Día de Los Muertos 5K – November 1, 2025</li>
+                <li className="text-lg">Laredo Marathon – November 16, 2025</li>
                 <li className="text-lg">Guajolote 10k Run– November 27, 2025</li>
+                <li className="text-lg">Jolly Run – December 13, 2025</li>
                 <li className="text-lg">Run Santa Run – December 24, 2025</li>
                 <li className="text-lg">Austin Marathon – February 15, 2026</li>
                 

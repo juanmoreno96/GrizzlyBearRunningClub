@@ -57,52 +57,25 @@ const Tips = () => {
 
       <h2 id= "mysecond5k"className="text-3xl text-center font-bold mb-4">My Second 5K Race: Chasing the Hour (April 26, 2025)</h2>
       <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-        <div className="w-full max-w-screen-2xl mx-auto p-6 flex items-center justify-center bg-transparent">
-          <div className="overflow-hidden rounded-lg shadow-lg w-[500px] h-[400px] flex items-center justify-center bg-transparent">
-            <Image
-              src="/gallery/events/runningBearthreecasa5k.jpg"
-              alt="Contact Image"
-              width={600}
-              height={900}
-              className="object-cover scale-125 w-full h-full"
-            />
+        <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
+          <div className="overflow-hidden rounded-lg shadow-lg w-full h-[420px] md:h-[600px]">
+        <Image
+          src="/gallery/events/runningBearthreecasa5k.jpg"
+          alt="Contact Image"
+          width={1200}
+          height={800}
+          className="object-cover w-full h-full"
+        />
           </div>
         </div>
-        <div className="col-span-2 w-full max-w-screen-2xl mx-auto p-6 bg-white shadow-lg rounded-xl">
+        <div className="col-span-1 w-full p-6 shadow-lg rounded-xl">
           <ul className="space-y-1">
         <li className="p-4 bg-gray-100 rounded-lg shadow">
           <p className="text-gray-600">Hello! I&apos;m Juan M, aka Bear — one of the founders of the Grizzly Bear Running Club — and this April, I completed my second 5K race.
           </p> 
           <p className="text-gray-600">Why is this race more important than the first? Because this was the first time I went in with a real goal: I wanted to beat my previous time and finish under an hour.
           </p>
-        </li>
-        <li className="p-4 bg-gray-100 rounded-lg shadow">
-          <p className="text-gray-600">Back in January, my coworkers and I set personal goals for the year 2025, and this was mine. Everyone on my team — including the running club — knew my mission, and from that moment on, it was time to train.</p>
-          <p className="text-gray-600">Now, I know what you&apos;re thinking: &quot;Finishing a 5K in under an hour? That should be easy.&quot; But for me — and my friend Juan B — this felt like climbing a mountain. We both started from square one, just walking as far as we could before getting winded. So to commit to a timed goal felt nearly impossible.</p>
-        </li>
-        <li className="p-4 bg-gray-100 rounded-lg shadow">
-          <p className="text-gray-600">Still, I started training in January, doing 5Ks week after week. But every single practice run? I was always over an hour — usually by 8 to 10 minutes. My confidence started to slip. And when race week came around, I was seriously second-guessing myself.</p>
-          <p className="text-gray-600">I even “accidentally” forgot to register online — a subconscious excuse ready to go. I was prepared to tell my friends I’d just show up to cheer them on. But on race morning, I made a decision: I suited up, headed to the event, and asked if I could register on the day of. And I could.</p>
-        </li>
-        <li className="p-4 bg-gray-100 rounded-lg shadow">
-          <p className="text-gray-600">So there I was — a nervous wreck. I hadn’t felt like that in a long time. But seeing my running club there helped calm me down.</p>
-          <p className="text-gray-600">Then the race began. Just like the first time, the energy was electric. The crowd cheered, and we were off. Before I knew it, I’d finished mile one and still felt good. I kept checking my watch to stay on pace.</p>
-        </li>
-        <li className="p-4 bg-gray-100 rounded-lg shadow">
-          <p className="text-gray-600">But mile two hit me like a wall. Maybe I pushed too hard early on. Maybe I wasn’t ready. But I kept moving — mostly power walking — just barely staying on time.</p>
-        </li>
-        <li className="p-4 bg-gray-100 rounded-lg shadow">
-          <p className="text-gray-600">Then came the final mile.</p>
-          <p className="text-gray-600">I found my rhythm again. I felt strong. And as I turned the last corner, I saw something incredible — my family and friends waiting at the finish line. Even though I was one of the last to cross, I looked down at my watch...</p>
-        </li>
-        <li className="p-4 bg-gray-100 rounded-lg shadow">
-          <p className="text-gray-600">54 minutes and 57 seconds.</p>
-        </li>
-        <li className="p-4 bg-gray-100 rounded-lg shadow">
-          <p className="text-gray-600">I did it.</p>
-        </li>
-        <li className="p-4 bg-gray-100 rounded-lg shadow">
-          <p className="text-gray-600">I reached my goal.</p>
+          <a href="/blog/blogStories/mySecondFiveKRace" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about My Second 5K Race">Read more...</a>
         </li>
           </ul> 
         </div>
@@ -111,7 +84,7 @@ const Tips = () => {
       <h2 id= "yearOftransformation"className="text-3xl text-center font-bold mb-4">A Year of Transformation (March 23, 2025)</h2>
       <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
         <div className="w-full max-w-screen-2xl mx-auto p-6">
-          <Image src="/johnyJourny/johnysecond.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
+          <Image src="/johnyJourny/johnyfourth.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
         </div>
         <div className="col-span-2 w-full max-w-screen-2xl mx-auto p-6 bg-white shadow-lg rounded-xl">
           <ul className="space-y-4">
@@ -120,78 +93,12 @@ const Tips = () => {
               </p>
             </li>
             <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">Like many others on a weight-loss journey, I had a general idea of what needed to be done: move more, eat better. But I had no clue how to start. It felt like trying to write an essay without knowing the topic. But, one thing I remembered from school was the importance of just starting, even if it was messy. So, I began with simple steps: walking after work, cutting out soda, and eating less fast food. It wasn’t much, but it was something.
-              </p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">People often ask why I started this journey. And while I wish I could say it was about becoming fit or leading a healthier life, the truth is more raw. It came from stress—stress from my job, but more than that, from the hurtful words of my ex. She said some cruel things about my weight, and those words hit harder than I ever expected. I had always been a bit self-conscious about my body. At 347 lbs, I had learned to accept myself, but her words shattered that. I realized then that I needed change—not just physically, but emotionally, mentally, and spiritually. I was so dissatisfied with my life that it became clear: I had to do something about it.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">At first, it was a struggle. I had no idea what I was doing. My first workout? A 15-minute walk around Cielito Lindo Park. When I was done, I was out of breath, my back ached, I was drenched in sweat, and feeling dizzy from dehydration. But somehow, I kept going. Even when I wanted to quit, her words—those sharp, hurtful words—echoed in my head. Work wasn’t helping either. I was overloaded with responsibilities, and my ideas were dismissed at every turn. I felt invisible. But something inside me told me to keep going. So, I did.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">Months passed, and progress was slow. After three months of walking and trying to eat healthier, I still couldn’t walk for more than 15 minutes without feeling exhausted. I was disappointed, frustrated, and close to giving up. I even started to believe my ex was right—that maybe I was destined to be overweight forever. After all, I had tried so many times before and had always been overweight. What made this time different? But then, a small voice inside me said, “Just give it one more week.” So, I did. And I’m so glad I did.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">One day, after that extra week of pushing through, I looked in the mirror and saw something I hadn’t seen in months: a noticeable change. Not a huge difference, but enough to make my size 58 pants feel looser around the waist. For anyone who has struggled with their weight, you know that feeling. It was a victory, and it was enough to fuel me for the next phase.</p>
+                <p className="text-gray-600">Like many others on a weight-loss journey, I had a general idea of what needed to be done: move more, eat better. But I had no clue how to start. It felt like trying to write an essay without knowing the topic. But, one thing I remembered from school was the importance of just starting, even if it was messy. So, I began with simple steps: walking after work, cutting out soda, and eating less fast food. It wasn&apos;t much, but it was something.
+                </p>
+                <a href="/blog/blogStories/yearOfTransformation" className="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
             </li>
           </ul> 
         </div>
-      </div>
-
-      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-        <div className="w-full max-w-screen-2xl mx-auto p-6">
-          <Image src="/johnyJourny/johnythird.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
-        </div>
-        <div className="col-span-2 w-full max-w-screen-2xl mx-auto p-6 bg-white shadow-lg rounded-xl">
-          <ul className="space-y-4">
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">As the weeks went on, I started adding resistance training into the mix. I reconnected with a good friend who had taught me about cardio back in my college days, and my old supervisor introduced me to flexibility training. It was clear now—I was slowly practicing all the key components of fitness: resistance, diet, flexibility, and cardio. Little did I know, I was building the foundation for something far greater than just weight loss.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">But something more than just physical transformation was happening. I was facing challenges at work and dealing with the fallout from my breakup, and it pushed me to reconnect with God. I started praying for guidance, strength, and clarity. What happened next is something I still don’t fully understand, but I believe it was divine intervention.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">One particularly tough day, I walked out of work feeling drained. I asked God if I was on the right path, if He was even there, and as I stepped into the parking lot, something surreal happened. It felt like the air around me shifted, and I was surrounded by butterflies. It sounds strange, but it was beautiful. That moment stayed with me.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">The next day at the gym, an elderly man I had never seen before approached me. He touched my shoulder and, calmly, told me, “You’re on the right path, and she didn’t deserve you. If only you knew the better things in store for you.” In that moment, I felt an overwhelming sense of peace, like everything would be okay. When I turned to thank him, he was gone—vanished. I looked for him, but no one at the gym remembered him. To this day, I don’t know if he was an angel or God’s messenger, but he showed up at some of the hardest moments of my life. And it gave me hope.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">Fast forward, and fitness became my anchor. Working out wasn’t a chore anymore; it was a form of meditation. I wasn’t just losing weight—I was rediscovering who I was. I started running. A friend invited me to a 5k, and despite my doubts, I signed up. I could barely run for a minute without feeling like I was dying, but I stuck with it. Running went from survival mode to something I enjoyed. One day, I ran a 5k nonstop. It wasn’t fast, but I finished. And that was all that mattered.</p>
-            </li>
-          </ul> 
-        </div>
-      </div>
-
-      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-        <div className="w-full max-w-screen-2xl mx-auto p-6">
-          <Image src="/johnyJourny/johnyfifth.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
-        </div>
-        <div className="col-span-2 w-full max-w-screen-2xl mx-auto p-6 bg-white shadow-lg rounded-xl">
-          <ul className="space-y-4">
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">The Zombie Run in October 2024 was a test, one I wasn’t sure I could pass. But I did. Though I was one of the last to cross the finish line, I met my goals: I ran the whole race and didn’t come in last. The next few months were a blur of races. I kept pushing, and each time, I improved.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">The San Antonio race in December 2024 was a game-changer. Despite freezing temperatures and rain, I pushed myself harder than ever before. I passed person after person and finished in 32 minutes—my best time yet. It was a clear sign that all my hard work was paying off.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">But I didn’t stop there. I kept training, kept researching, kept improving. By the time I ran the George Washington Celebration Run, I had shaved minutes off my time, finishing in 28 minutes—my fastest yet. I wasn’t just keeping up; I was ahead of the pack. And for the first time, I felt like I belonged.</p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">Throughout this process, I realized something important: I had become a hybrid athlete. Running was no longer my sole focus. My resistance training and flexibility were just as important. My relationship with food had transformed. I gained muscle, lost weight, and, most importantly, grew emotionally and mentally. I got a new job, one that supported my mental health. I found a family in the Laredo fitness community, and we pushed each other to be better every day.</p>
-            </li>
-          </ul> 
-        </div>
-      </div>
-      <div className = "relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
-        <div className="md:w-1/2 flex justify-center">
-          <Image src="/johnyJourny/johnyfirst.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={400} height={300}/>
-        </div>
-        <div className="md:w-1/2 flex justify-center">
-          <Image src="/johnyJourny/johnyfourth.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={335} height={600}/>
-         </div>
       </div>
       </div>
       <Footer />
