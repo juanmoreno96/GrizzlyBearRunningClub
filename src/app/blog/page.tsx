@@ -49,58 +49,98 @@ const Tips = () => {
               <a href="#mysecond5k" className="hover:underline mt-1">
                 My Second 5K Race: Chasing the Hour (April 26, 2025)
               </a>
+              <a href="#runningRout2025" className="hover:underline">
+                Grizzly Bear Running Club Kicks Off Its First Running Tour! (October 11, 2025)
+              </a>
             </div>
           </div>
       </div>
             
       
 
-      <h2 id= "mysecond5k"className="text-3xl text-center font-bold mb-4">My Second 5K Race: Chasing the Hour (April 26, 2025)</h2>
-      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-        <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
-          <div className="overflow-hidden rounded-lg shadow-lg w-full h-[420px] md:h-[600px]">
-        <Image
-          src="/gallery/events/runningBearthreecasa5k.jpg"
-          alt="Contact Image"
-          width={1200}
-          height={800}
-          className="object-cover w-full h-full"
-        />
+      <h2 id= "runningRout2025"className="text-3xl text-center font-bold mb-4">Grizzly Bear Running Club Kicks Off Its First Running Tour! (October 11, 2025)</h2>
+        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
+          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
+            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
+          <Image
+            src="/blogPhotos/zombieRunTreat.jpeg"
+            alt="Zombie Run Event Image"
+            width={600}
+            height={400}
+            className="object-cover w-full h-full"
+          />
+            </div>
+          </div>
+          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
+            <ul className="space-y-1">
+          <li className="p-4 bg-gray-100 rounded-lg shadow">
+            <p className="text-gray-600">The season’s just getting started, and so are we! The Grizzly Bear Running Club has officially launched its first-ever Running Tour
+            </p> 
+          </li>
+          <li className="p-4 bg-gray-100 rounded-lg shadow">
+            <p className="text-gray-600">— here’s how our first few races went and what’s coming next.
+             </p>
+            <a href="/blog/blogStories/runningTour2025" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about My Second 5K Race">Read more...</a>
+          </li>
+            
+            </ul> 
           </div>
         </div>
-        <div className="col-span-1 w-full p-6 shadow-lg rounded-xl">
-          <ul className="space-y-1">
-        <li className="p-4 bg-gray-100 rounded-lg shadow">
-          <p className="text-gray-600">Hello! I&apos;m Juan M, aka Bear — one of the founders of the Grizzly Bear Running Club — and this April, I completed my second 5K race.
-          </p> 
-          <p className="text-gray-600">Why is this race more important than the first? Because this was the first time I went in with a real goal: I wanted to beat my previous time and finish under an hour.
-          </p>
-          <a href="/blog/blogStories/mySecondFiveKRace" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about My Second 5K Race">Read more...</a>
-        </li>
-          </ul> 
-        </div>
-      </div>
       <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
-      <h2 id= "yearOftransformation"className="text-3xl text-center font-bold mb-4">A Year of Transformation (March 23, 2025)</h2>
+      <h2 id= "mysecond5k"className="text-3xl text-center font-bold mb-4">My Second 5K Race: Chasing the Hour (April 26, 2025)</h2>
+        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
+          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
+            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[420px] md:h-[600px]">
+          <Image
+            src="/gallery/events/runningBearthreecasa5k.jpg"
+            alt="Contact Image"
+            width={1200}
+            height={800}
+            className="object-cover w-full h-full"
+          />
+            </div>
+          </div>
+          <div className="col-span-1 w-full p-6 shadow-lg rounded-xl bg-white">
+            <ul className="space-y-1">
+          <li className="p-4 bg-gray-100 rounded-lg shadow">
+            <p className="text-gray-600">Hello! I&apos;m Juan M, aka Bear — one of the founders of the Grizzly Bear Running Club — and this April, I completed my second 5K race.
+            </p> 
+            <p className="text-gray-600">Why is this race more important than the first? Because this was the first time I went in with a real goal: I wanted to beat my previous time and finish under an hour.
+            </p>
+            <a href="/blog/blogStories/mySecondFiveKRace" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about My Second 5K Race">Read more...</a>
+          </li>
+            </ul> 
+          </div>
+        </div>
+      <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
+        <h2 id= "yearOftransformation"className="text-3xl text-center font-bold mb-4">A Year of Transformation (March 23, 2025)</h2>
       <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-        <div className="w-full max-w-screen-2xl mx-auto p-6">
-          <Image src="/johnyJourny/johnyfourth.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
+        <div className="w-full max-w-screen-2xl mx-auto p-6 flex items-center justify-center">
+          <div className="overflow-hidden rounded-lg shadow-lg w-full h-[500px]">
+            <Image 
+              src="/johnyJourny/johnyfourth.jpg" 
+              alt="Contact Image" 
+              width={800} 
+              height={600}
+              className="object-cover w-full h-full" 
+            />
+          </div>
         </div>
         <div className="col-span-2 w-full max-w-screen-2xl mx-auto p-6 bg-white shadow-lg rounded-xl">
-          <ul className="space-y-4">
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-              <p className="text-gray-600">A year ago today, I started a journey that, honestly, I never thought I’d get far in. I’d tried to lose weight countless times before—so many times, I’ve lost track of how many failures I’ve had. Each attempt had its small victories, but nothing ever seemed to stick.
-              </p>
-            </li>
-            <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600">Like many others on a weight-loss journey, I had a general idea of what needed to be done: move more, eat better. But I had no clue how to start. It felt like trying to write an essay without knowing the topic. But, one thing I remembered from school was the importance of just starting, even if it was messy. So, I began with simple steps: walking after work, cutting out soda, and eating less fast food. It wasn&apos;t much, but it was something.
+            <ul className="space-y-4">
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                <p className="text-gray-600">A year ago today, I started a journey that, honestly, I never thought I’d get far in. I’d tried to lose weight countless times before—so many times, I’ve lost track of how many failures I’ve had. Each attempt had its small victories, but nothing ever seemed to stick.
                 </p>
-                <a href="/blog/blogStories/yearOfTransformation" className="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
-            </li>
-          </ul> 
+              </li>
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                  <p className="text-gray-600">Like many others on a weight-loss journey, I had a general idea of what needed to be done: move more, eat better. But I had no clue how to start. It felt like trying to write an essay without knowing the topic. But, one thing I remembered from school was the importance of just starting, even if it was messy. So, I began with simple steps: walking after work, cutting out soda, and eating less fast food. It wasn&apos;t much, but it was something.
+                  </p>
+                  <a href="/blog/blogStories/yearOfTransformation" className="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+              </li>
+            </ul> 
+          </div>
         </div>
-      </div>
-      </div>
+        </div>
       <Footer />
       </>)}
       
