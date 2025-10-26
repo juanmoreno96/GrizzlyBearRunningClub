@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import LoadingThreeDotsJumping from "../components/LoadingThreeDotsJumping"; // Import the new loading component
 import Head from "next/head";
+import { Instagram, Activity } from "lucide-react";
 
 const JoinUs = () => {
   const [isLoading, setIsLoading] = useState(true); // State to track loading
@@ -65,6 +66,7 @@ const JoinUs = () => {
         // Main content
         <>
           <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/lunaEars.jpg')] opacity-80 "></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
           <div className="bg-diagonal-stripes">
             <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
             <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6 text-center bg-black/10 backdrop-blur-md md:text-center p-5">
@@ -122,11 +124,13 @@ const JoinUs = () => {
               <ul className="space-y-4">
                 <li>
                     <a href="https://www.instagram.com/grizzlybear_runningclub/" className="text-pink-500 hover:underline text-2xl" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="inline-block mr-2 h-6 w-6 text-pink-500" />
                     Instagram: @grizzlybear_runningclub
                     </a>
                 </li>
                 <li>
                   <a href="https://www.strava.com/clubs/1689981" className="text-orange-600 hover:underline text-2xl" target="_blank" rel="noopener noreferrer">
+                  <Activity className="inline-block mr-2 h-6 w-6 text-orange-600" />
                     Strava: Grizzly Bear Running Club
                     </a>
                 </li>

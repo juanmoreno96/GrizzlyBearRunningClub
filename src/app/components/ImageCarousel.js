@@ -43,7 +43,7 @@ export default function SwiperCarousel() {
         delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
-        enabled: true
+        enabled: true,
       }}
       breakpoints={{
         640: {
@@ -55,8 +55,16 @@ export default function SwiperCarousel() {
     >
       {slides.map((image) => (
         <SwiperSlide key={image.id}>
-          <div className="relative h-full w-full rounded-xl overflow-hidden shadow-xl cursor-grab active:cursor-grabbing">
-            <Image src={image.src} alt={image.alt} fill className="object-cover" />
+          <div className="group relative h-full w-full rounded-xl overflow-hidden shadow-xl cursor-grab active:cursor-grabbing">
+            {/* Image with zoom effect */}
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            />
+            {/* Dark overlay fade-in on hover */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
         </SwiperSlide>
       ))}

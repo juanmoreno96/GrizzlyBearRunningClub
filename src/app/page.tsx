@@ -8,9 +8,19 @@ import ImageCarousel from "./components/ImageCarousel";
 import { useState, useEffect } from "react";
 import LoadingThreeDotsJumping from "./components/LoadingThreeDotsJumping"; // Import the loading dots component
 import Head from "next/head";
+import { ChevronDown, ArrowRight, BookOpen, Users,NotebookPen, Newspaper, Camera} from "lucide-react";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true); // State to track loading
+
+  const scrollToContent = () => {
+    const contentSection = document.getElementById('news-section')
+    if (contentSection) {
+      contentSection.scrollIntoView({
+        behavior: 'smooth',
+      })
+    }
+  }
 
   useEffect(() => {
     // Wait for all resources to load with a minimum delay
@@ -67,6 +77,7 @@ export default function Home() {
                   className="object-cover"
                   style={{ objectPosition: "50% 50%" }} // horizontal (x) then vertical (y)
                 />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
               </div>
                {/* Hero background image using next/image fill (image behind content) */}
             
@@ -85,6 +96,12 @@ export default function Home() {
               </Link>
             </div>
             </div>
+            <button
+                onClick={scrollToContent}
+                className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white hover:text-red-800 transition-colors animate-bounce z-30"
+              >
+                <ChevronDown className="h-8 w-8" />
+            </button>
            
             
           </>
@@ -93,39 +110,46 @@ export default function Home() {
       {/* MAIN PAGE CONTENT: This appears once the hero section has fully shrunk.
                 It starts right after the (now smaller) hero.
             */}
-            <div>
+            <div id = "news-section">
               <main className="relative z-20 bg-rose-950 bg-diagonal-stripes min-h-[100vh] text-gray-800">
               {/* WHAT'S HAPPENED SECTION */}
               <section className="py-16 px-6 max-w-5xl mx-auto">
-                <h2 className="text-4xl font-bold text-white mb-8 border-b-2 pb-2">
-                  What&apos;s Happened Recently? 📰
+                <h2 className="flex items-center justify-center text-4xl font-bold text-white mb-8 border-b-2 pb-2">
+                  What&apos;s Happened Recently?
+                  <Newspaper className="ml-2 h-10 w-10 text-white" />
                 </h2>
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div className="p-6 border bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                  <div className="group p-6 border border-gray-200 bg-gray-100 rounded-lg shadow-md hover:bg-gray-50 hover:border-rose-400 hover:shadow-lg transition-all duration-300 hover:bg-rose-50">
+                    <BookOpen className="mb-2 h-6 w-6 text-rose-600"/>
                     <h3 className="text-2xl font-semibold mb-2">Latest Blog!</h3>
                     <p className="text-gray-600">
                       Check out our Latest Blog Post about our recent marathon success and how our members achieved their personal bests.
                     </p>
-                    <Link href="/blog" className="text-blue-600 hover:text-blue-800 block mt-4">
-                      Read More &rarr;
+                    <Link href="/blog" className="inline-flex items-center text-rose-600 font-medium mt-4 transition-all group-hover:text-rose-800">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
-                  <div className="p-6 border bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                  <div className="group p-6 border border-gray-200 bg-gray-100 rounded-lg shadow-md hover:bg-gray-50 hover:border-rose-400 hover:shadow-lg transition-all duration-300 hover:bg-rose-50">
+                    <NotebookPen className="mb-2 h-6 w-6 text-rose-600"/>
                     <h3 className="text-2xl font-semibold mb-2">Tips and Tricks</h3>
                     <p className="text-gray-600">
                       Go to our Tips Page to find expert advice on improving your running form, nutrition, and injury prevention.
                     </p>
-                    <Link href="/tips" className="text-blue-600 hover:text-blue-800 block mt-4">
-                      View Our Page &rarr;
+                    <Link href="/tips" className="inline-flex items-center text-rose-600 font-medium mt-4 transition-all group-hover:text-rose-800">
+                      View Our Page
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
-                  <div className="p-6 border bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                  <div className="group p-6 border border-gray-200 bg-gray-100 rounded-lg shadow-md hover:bg-gray-50 hover:border-rose-400 hover:shadow-lg transition-all duration-300 hover:bg-rose-50">
+                    <Users className="mb-2 h-6 w-6 text-rose-600"/>
                     <h3 className="text-2xl font-semibold mb-2">Check out our Story</h3>
                     <p className="text-gray-600">
                       Welcome to all new members! Check out our story and follow us through our adventures.
                     </p>
-                    <Link href="/contact" className="text-blue-600 hover:text-blue-800 block mt-4">
-                      Details Here &rarr;
+                    <Link href="/contact" className="inline-flex items-center text-rose-600 font-medium mt-4 transition-all group-hover:text-rose-800">
+                      Details Here
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
@@ -136,7 +160,10 @@ export default function Home() {
               {/* GALLERY CAROUSEL SECTION */}
               <section className="bg-gray-50 py-16 px-6 bg-diagonal-stripes">
                 <div className="max-w-6xl mx-auto">
-                  <h2 className="text-4xl font-bold text-rose-950 mb-8 text-center">Grizzly Gallery 📸</h2>
+                  <h2 className="flex items-center justify-center text-4xl font-bold text-rose-950 mb-8">
+                    Grizzly Gallery
+                    <Camera className="ml-2 h-10 w-10 text-rose-950" />
+                  </h2>
                   <ImageCarousel />
                   <div className="text-center mt-8">
                     <Link href="/gallery" passHref>

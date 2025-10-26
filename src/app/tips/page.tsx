@@ -40,6 +40,7 @@ const Tips = () => {
       ) : ( <>  
 
 <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/home-banner.jpg')] opacity-80"></div>
+<div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
     <div className = "bg-diagonal-stripes z-10">
        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 mt-24 max-w-screen-2xl mx-auto">
         <div className="col-span-2 w-full max-w-screen-2xl mx-auto p-6 bg-white shadow-lg rounded-xl">
