@@ -67,43 +67,70 @@ export default function Home() {
           // Main content
           <>
             <Navbar />
-            <div className="relative">
-                <div className="fixed inset-0 w-full h-full ">
+            <div className="hidden md:block relative">
+              <div className="fixed inset-0 w-full h-full">
                 <Image
                   src="/bannerPhotos/running-hero.jpg"
                   alt="Running hero"
                   fill
                   priority
                   className="object-cover"
-                  style={{ objectPosition: "50% 50%" }} // horizontal (x) then vertical (y)
+                  style={{ objectPosition: "50% 50%" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent pointer-events-none" />
               </div>
-               {/* Hero background image using next/image fill (image behind content) */}
-            
-            {/* Optional overlay to darken image for readable text */}
-            <div className="absolute inset-0 bg-black/30 -z-10" />
 
-            <div className="relative flex flex-col items-center justify-center min-h-screen text-center text-white px-6 z-20">
-              <h1 className="text-5xl md:text-6xl font-bold">Run Together, Stay Strong</h1>
-              <p className="mt-4 text-lg md:text-xl text-white">
-                Join our running community and push your limits!
-              </p>
-              <Link href="/contact" passHref>
-                <button className="mt-6 px-6 py-3 text-lg font-medium bg-blue-600 hover:bg-blue-500 rounded-lg">
-                  Join the Club
+              {/* Hero content on desktop */}
+              <div className="relative flex flex-col items-center justify-center min-h-screen text-center text-white px-6 z-20">
+                <h1 className="text-5xl md:text-6xl font-bold">Run Together, Stay Strong</h1>
+                <p className="mt-4 text-lg md:text-xl text-white">
+                  Join our running community and push your limits!
+                </p>
+                <Link href="/contact" passHref>
+                  <button className="mt-6 px-6 py-3 text-lg font-medium bg-blue-600 hover:bg-blue-500 rounded-lg">
+                    Join the Club
+                  </button>
+                </Link>
+                <button
+                  onClick={scrollToContent}
+                  className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white hover:text-red-800 transition-colors animate-bounce z-30"
+                >
+                  <ChevronDown className="h-8 w-8" />
                 </button>
-              </Link>
+              </div>
             </div>
+
+            {/* Mobile Hero (Unified Image + Content) */}
+            <div className="md:hidden relative h-screen flex flex-col justify-center items-center text-center text-white px-6">
+              <Image
+                src="/bannerPhotos/running-hero.jpg"
+                alt="Running hero"
+                fill
+                priority
+                className="object-cover"
+                style={{ objectPosition: "50% 50%" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent pointer-events-none" />
+              
+              {/* Hero content stays on top of image */}
+              <div className="relative z-10">
+                <h1 className="text-4xl font-bold">Run Together, Stay Strong</h1>
+                <p className="mt-3 text-base text-white">
+                  Join our running community and push your limits!
+                </p>
+                <Link href="/contact" passHref>
+                  <button className="mt-5 px-5 py-3 text-base font-medium bg-blue-600 hover:bg-blue-500 rounded-lg">
+                    Join the Club
+                  </button>
+                </Link>
+              </div>
+              <button
+                  onClick={scrollToContent}
+                  className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white hover:text-red-800 transition-colors animate-bounce z-30"
+                >
+                  <ChevronDown className="h-8 w-8" />
+                </button>
             </div>
-            <button
-                onClick={scrollToContent}
-                className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white hover:text-red-800 transition-colors animate-bounce z-30"
-              >
-                <ChevronDown className="h-8 w-8" />
-            </button>
-           
-            
           </>
         )}
       </div>
