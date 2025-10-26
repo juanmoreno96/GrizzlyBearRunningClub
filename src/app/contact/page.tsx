@@ -65,7 +65,7 @@ const JoinUs = () => {
       ) : (
         // Main content
         <>
-          <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/lunaEars.jpg')] opacity-80 bg-[center_top_80%]"></div>
+          <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/lunaEars.jpg')] opacity-80 bg-[center_top_82%]"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
           <div className="bg-diagonal-stripes">
             <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
