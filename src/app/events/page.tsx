@@ -59,6 +59,7 @@ const pastEventsByYear: Record<string, string[]> = {
     "CASA Superhero Run – April 26, 2025",
     "TAMIU Zombie Run – October 11, 2025",
     "Steps Forward 5K – October 19, 2025",
+    "Día de Los Muertos 5K – November 1, 2025",
   ],
   "2024": [
     "Zombie Run – October 12, 2024",
@@ -147,7 +148,6 @@ return (
             <div className="md:w-1/2 md:ml-6 text-center bg-black/10 backdrop-blur-md p-6">
               <h2 className="text-3xl text-center font-bold mb-4 underline">Future Events</h2>
               <ul className="list-disc list-inside text-left space-y-2">
-                <li className="text-lg">Día de Los Muertos 5K – November 1, 2025</li>
                 <li className="text-lg">Laredo Marathon – November 16, 2025</li>
                 <li className="text-lg">Guajolote 10k Run– November 27, 2025</li>
                 <li className="text-lg">Jolly Run – December 13, 2025</li>

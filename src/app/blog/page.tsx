@@ -52,11 +52,41 @@ const Tips = () => {
               <a href="#runningRout2025" className="hover:underline">
                 Grizzly Bear Running Club Kicks Off Its First Running Tour! (October 11, 2025)
               </a>
+              <a href="#diaDeMuertos" className="hover:underline">
+                What a Night! Our Día de los Muertos 5K Glow Run! (November 01, 2025)
+              </a>
             </div>
           </div>
       </div>
             
-      
+      <h2 id="diaDeMuertos" className="text-3xl text-center font-bold mb-4">What a Night! Our Día de los Muertos 5K Glow Run (November 01, 2025)</h2>
+        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
+          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
+            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
+              <Image
+                src="/blogPhotos/dia_del_lost_muerto_all_group.jpg"
+                alt="Día de los Muertos 5K Glow Run Group Photo"
+                width={600}
+                height={400}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
+            <ul className="space-y-1">
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                <p className="text-gray-600">This past weekend was truly special for the Grizzly Bear Running Club. We participated in our first nighttime race — the Día de los Muertos 5K Glow Run
+                </p> 
+              </li>
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                <p className="text-gray-600">— and it was an unforgettable experience filled with party lights, mariachi music, and a celebration of culture and community.
+                </p>
+                <a href="/blog/blogStories/diaDeMuertosBlog" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about Día de los Muertos 5K Glow Run">Read more...</a>
+              </li>
+            </ul> 
+          </div>
+        </div>
+        <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
 
       <h2 id= "runningRout2025"className="text-3xl text-center font-bold mb-4">Grizzly Bear Running Club Kicks Off Its First Running Tour! (October 11, 2025)</h2>
         <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">

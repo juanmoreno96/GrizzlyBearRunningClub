@@ -10,6 +10,7 @@ export const galleryEvents: { id: string; src: string; alt: string; width: numbe
   { id: "imgE3", src: "/gallery/events/johnyfifeksighn.jpg", alt: "Runner tying shoes before race", width: 800, height: 600 },
   { id: "imgE4", src: "/gallery/events/juanjuanbeforerun.jpg", alt: "Two runners stretching before the start", width: 800, height: 600 },
   { id: "imgE5", src: "/gallery/events/juanjuanrun.jpg", alt: "Runner sprinting toward the finish", width: 800, height: 600 },
+  { id: "imgE13", src: "/blogPhotos/dia_de_lost_muerto_picking_up_bid.jpg", alt: "dia de lost muertos event picking up bibs", width: 800, height: 600 },
+  { id: "imgE14", src: "/blogPhotos/dia_de_lost_muerto_runners_group.jpg", alt: "dia de lost muertos event runners group", width: 800, height: 600 },
 ];
-
 export default galleryEvents;

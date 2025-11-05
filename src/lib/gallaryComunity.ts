@@ -12,6 +12,8 @@ export const galleryCommunity: { id: string; src: string; alt: string; width: nu
   { id: "imgC10", src: "/gallery/community/johnyRuuning.jpg", alt: "Runner mid-stride on a sunny day", width: 800, height: 600 },
   { id: "imgC11", src: "/gallery/community/juanLunaWoods.jpg", alt: "Two runners enjoying a woodland trail", width: 800, height: 600 },
   { id: "imgC12", src: "/gallery/community/memissing.jpg", alt: "Community run candid moment", width: 800, height: 600 },
+  { id: "imgC13", src: "/blogPhotos/dia_del_lost_muerto_all_group.jpg", alt: "dia de lost muertos group photo", width: 800, height: 600 },
+  { id: "imgC14", src: "/blogPhotos/dia_de_lost_muerto_culture.jpg", alt: "dia de lost muertos event", width: 800, height: 600 },
 ];
 
 export default galleryCommunity;
