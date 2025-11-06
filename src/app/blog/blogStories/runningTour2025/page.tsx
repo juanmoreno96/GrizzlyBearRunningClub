@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 
 const runningTour2025 = () => {
   return (
@@ -44,9 +45,11 @@ const runningTour2025 = () => {
             </p>
           </div>
           <div className="rounded-xl overflow-hidden shadow-2xl">
-            <img
+            <Image
               src="/blogPhotos/poster25.png"
               alt="Grizzly Bear Running Tour Poster"
+              width={1200}
+              height={800}
               className="w-full h-auto"
             />
           </div>
@@ -55,9 +58,11 @@ const runningTour2025 = () => {
         {/* Steps Forward 5K - Image Left, Text Right */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="rounded-xl overflow-hidden shadow-2xl order-2 md:order-1">
-            <img
+            <Image
               src="/blogPhotos/johnyBResults.jpg"
               alt="Juan B Top Ten Finish"
+              width={1200}
+              height={800}
               className="w-full h-auto"
             />
           </div>
@@ -97,9 +102,11 @@ const runningTour2025 = () => {
             </p>
           </div>
           <div className="rounded-xl overflow-hidden shadow-2xl">
-            <img
+            <Image
               src="/blogPhotos/zombieRunGroupRun.jpeg"
               alt="Grizzly Bear Running Club Group Run"
+              width={1200}
+              height={800}
               className="w-full h-auto"
             />
           </div>

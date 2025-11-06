@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 
 const diaDeMuertosBlog = () => {
   return (
@@ -43,9 +44,11 @@ const diaDeMuertosBlog = () => {
             </p>
           </div>
           <div className="rounded-xl overflow-hidden shadow-2xl">
-            <img
+            <Image
               src="/blogPhotos/dia_de_lost_muerto_culture.jpg"
               alt="Día de los Muertos Festival Celebration"
+              width={1200}
+              height={800}
               className="w-full h-auto object-cover"
             />
           </div>
@@ -54,9 +57,11 @@ const diaDeMuertosBlog = () => {
         {/* The Glow Run Experience - Image Left, Text Right */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="rounded-xl overflow-hidden shadow-2xl order-2 md:order-1">
-            <img
+            <Image
               src="/blogPhotos/dia_de_lost_muerto_picking_up_bid.jpg"
               alt="Picking up race bibs"
+              width={1200}
+              height={800}
               className="w-full h-auto object-cover"
             />
           </div>
@@ -88,9 +93,11 @@ const diaDeMuertosBlog = () => {
             </p>
           </div>
           <div className="rounded-xl overflow-hidden shadow-2xl">
-            <img
+            <Image
               src="/blogPhotos/dia_de_lost_muerto_runners_group.jpg"
               alt="Grizzly Bear Running Club at the race"
+              width={1200}
+              height={80}
               className="w-full h-auto object-cover"
             />
           </div>
@@ -99,9 +106,11 @@ const diaDeMuertosBlog = () => {
         {/* Strong Performances - Image Left, Text Right */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="rounded-xl overflow-hidden shadow-2xl order-2 md:order-1">
-            <img
+            <Image
               src="/blogPhotos/dia_del_lost_muerto_all_group.jpg"
               alt="Full Grizzly Bear Running Club team"
+              width={1200}
+              height={800}
               className="w-full h-auto object-cover"
             />
           </div>
