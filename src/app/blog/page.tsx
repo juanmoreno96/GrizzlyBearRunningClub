@@ -56,12 +56,12 @@ const Tips = () => {
                 What a Night! Our Día de los Muertos 5K Glow Run! (November 01, 2025)
               </a>
               <a href="#laredoMarathon" className="hover:underline">
-                From Spectator to Finisher: My Laredo Marathon Journey (February 02, 2025)
+                From Spectator to Finisher: My Laredo Marathon Journey (November 16, 2025)
               </a>
             </div>
           </div>
       </div>
-      <h2 id="laredoMarathon" className="text-3xl text-center font-bold mb-4">From Spectator to Finisher: My Laredo Marathon Journey (February 02, 2025)</h2>
+      <h2 id="laredoMarathon" className="text-3xl text-center font-bold mb-4">From Spectator to Finisher: My Laredo Marathon Journey (November 16, 2025)</h2>
         <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
           <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
             <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
