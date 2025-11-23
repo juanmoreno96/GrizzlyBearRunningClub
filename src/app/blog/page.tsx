@@ -55,10 +55,42 @@ const Tips = () => {
               <a href="#diaDeMuertos" className="hover:underline">
                 What a Night! Our Día de los Muertos 5K Glow Run! (November 01, 2025)
               </a>
+              <a href="#laredoMarathon" className="hover:underline">
+                From Spectator to Finisher: My Laredo Marathon Journey (February 02, 2025)
+              </a>
             </div>
           </div>
       </div>
-            
+      <h2 id="laredoMarathon" className="text-3xl text-center font-bold mb-4">From Spectator to Finisher: My Laredo Marathon Journey (February 02, 2025)</h2>
+        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
+          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
+            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
+              <Image
+                src="/blogPhotos/laredo_marathon_group.jpg"
+                alt="Día de los Muertos 5K Glow Run Group Photo"
+                width={600}
+                height={400}
+                className="object-cover w-full h-full"
+                style={{ objectPosition: '50% 30%' }}
+              />
+            </div>
+          </div>
+          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
+            <ul className="space-y-1">
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                <p className="text-gray-600">Two years ago, I watched runners cross McPherson Street and thought, 
+                  &quot;There&apos;s no way a fat guy like me could ever do that.&quot;
+                </p> 
+              </li>
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                <p className="text-gray-600"> Fast forward to 2025: I found myself at the starting line of the Laredo Marathon, 
+                  ready to prove that anything is possible with determination and hard work.
+                </p>
+                <a href="/blog/blogStories/laredoMarathonBlog" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about Día de los Muertos 5K Glow Run">Read more...</a>
+              </li>
+            </ul> 
+          </div>
+        </div> 
       <h2 id="diaDeMuertos" className="text-3xl text-center font-bold mb-4">What a Night! Our Día de los Muertos 5K Glow Run (November 01, 2025)</h2>
         <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
           <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
