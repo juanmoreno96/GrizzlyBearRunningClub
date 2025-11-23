@@ -14,6 +14,8 @@ export const galleryCommunity: { id: string; src: string; alt: string; width: nu
   { id: "imgC12", src: "/gallery/community/memissing.jpg", alt: "Community run candid moment", width: 800, height: 600 },
   { id: "imgC13", src: "/blogPhotos/dia_del_lost_muerto_all_group.jpg", alt: "dia de lost muertos group photo", width: 800, height: 600 },
   { id: "imgC14", src: "/blogPhotos/dia_de_lost_muerto_culture.jpg", alt: "dia de lost muertos event", width: 800, height: 600 },
+  { id: "imgC15", src: "/blogPhotos/laredo_marathon_group.jpg", alt: "Laredo half marathon group photo", width: 800, height: 600 },
+  { id: "imgC16", src: "/blogPhotos/laredo_marathon_john_friend_bear.jpg", alt: "Laredo half marathon after group photo", width: 800, height: 600 },
 ];
 
 export default galleryCommunity;

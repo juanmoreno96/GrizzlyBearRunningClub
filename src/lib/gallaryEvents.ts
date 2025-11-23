@@ -12,5 +12,8 @@ export const galleryEvents: { id: string; src: string; alt: string; width: numbe
   { id: "imgE5", src: "/gallery/events/juanjuanrun.jpg", alt: "Runner sprinting toward the finish", width: 800, height: 600 },
   { id: "imgE13", src: "/blogPhotos/dia_de_lost_muerto_picking_up_bid.jpg", alt: "dia de lost muertos event picking up bibs", width: 800, height: 600 },
   { id: "imgE14", src: "/blogPhotos/dia_de_lost_muerto_runners_group.jpg", alt: "dia de lost muertos event runners group", width: 800, height: 600 },
+  { id: "imgE15", src: "/blogPhotos/laredo_marathon_johny_friend.jpg", alt: "laredo half marathon before group", width: 800, height: 600 },
+  { id: "imgE16", src: "/blogPhotos/laredo_marathon_johny_mom_bear.jpg", alt: "laredo half marathon starting line", width: 800, height: 600 },
+  { id: "imgE17", src: "/blogPhotos/laredo_marathon_johny_mom.jpg", alt: "laredo half marathon running event", width: 800, height: 600 },
 ];
 export default galleryEvents;

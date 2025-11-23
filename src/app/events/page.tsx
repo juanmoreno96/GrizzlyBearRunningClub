@@ -32,7 +32,6 @@ const Events = () => {
   }, []);
 
   type LeaderboardTab = "5k" | "10k" | "halfMarathon" | "marathon"; // Define valid keys
-  const [activeTab, setActiveTab] = useState<LeaderboardTab>("5k"); // State to track active tab
   const leaderboardData: Record<LeaderboardTab, { name: string; time: string; event: string; place: string }[]> = {
     "5k": [
       { name: "Juan B", time: "25:45", event: "TAMIU Zombie Run", place: "Laredo Tx" },
@@ -43,12 +42,25 @@ const Events = () => {
       
     ],
     "halfMarathon": [
-      
+      { name: "Juan B", time: "2:26:25", event: "Laredo Half Marathon", place: "Laredo Tx" },
     ],
     "marathon": [
       
     ],
   };
+
+  // Find the first non-empty tab starting from marathon down to 5k
+  const getDefaultTab = (): LeaderboardTab => {
+    const tabs: LeaderboardTab[] = ["marathon", "halfMarathon", "10k", "5k"];
+    for (const tab of tabs) {
+      if (leaderboardData[tab].length > 0) {
+        return tab;
+      }
+    }
+    return "5k"; // Fallback to 5k if all are empty
+  };
+
+  const [activeTab, setActiveTab] = useState<LeaderboardTab>(getDefaultTab()); // State to track active tab
 
 // Move these hooks and variables above the return statement
 const [activeYear, setActiveYear] = useState("2025");
@@ -60,6 +72,7 @@ const pastEventsByYear: Record<string, string[]> = {
     "TAMIU Zombie Run – October 11, 2025",
     "Steps Forward 5K – October 19, 2025",
     "Día de Los Muertos 5K – November 1, 2025",
+    "Laredo Marathon – November 16, 2025",
   ],
   "2024": [
     "Zombie Run – October 12, 2024",
@@ -148,7 +161,6 @@ return (
             <div className="md:w-1/2 md:ml-6 text-center bg-black/10 backdrop-blur-md p-6">
               <h2 className="text-3xl text-center font-bold mb-4 underline">Future Events</h2>
               <ul className="list-disc list-inside text-left space-y-2">
-                <li className="text-lg">Laredo Marathon – November 16, 2025</li>
                 <li className="text-lg">Guajolote 10k Run– November 27, 2025</li>
                 <li className="text-lg">Jolly Run – December 13, 2025</li>
                 <li className="text-lg">Run Santa Run – December 24, 2025</li>
@@ -161,16 +173,16 @@ return (
             <h2 className="text-3xl text-center font-bold mb-4 underline">Leaderboard</h2>
             <div className="w-full bg-black/10 backdrop-blur-md p-6 rounded-lg shadow-lg">
               <div className="flex justify-center mb-4">
-                <button className="px-4 py-2 mx-2 bg-rose-800 text-white rounded hover:bg-rose-700" onClick={() => setActiveTab("5k")}>
+                <button className={`px-4 py-2 mx-2 rounded transition-colors ${activeTab === "5k" ? "bg-rose-600 text-white font-bold border-2 border-yellow-400" : "bg-rose-800 text-white hover:bg-rose-700"}`} onClick={() => setActiveTab("5k")}>
                   5K
                 </button>
-                <button className="px-4 py-2 mx-2 bg-rose-800 text-white rounded hover:bg-rose-700" onClick={() => setActiveTab("10k")}>
+                <button className={`px-4 py-2 mx-2 rounded transition-colors ${activeTab === "10k" ? "bg-rose-600 text-white font-bold border-2 border-yellow-400" : "bg-rose-800 text-white hover:bg-rose-700"}`} onClick={() => setActiveTab("10k")}>
                   10K
                 </button>
-                <button className="px-4 py-2 mx-2 bg-rose-800 text-white rounded hover:bg-rose-700" onClick={() => setActiveTab("halfMarathon")}>
+                <button className={`px-4 py-2 mx-2 rounded transition-colors ${activeTab === "halfMarathon" ? "bg-rose-600 text-white font-bold border-2 border-yellow-400" : "bg-rose-800 text-white hover:bg-rose-700"}`} onClick={() => setActiveTab("halfMarathon")}>
                   Half Marathon
                 </button>
-                <button className="px-4 py-2 mx-2 bg-rose-800 text-white rounded hover:bg-rose-700" onClick={() => setActiveTab("marathon")}>
+                <button className={`px-4 py-2 mx-2 rounded transition-colors ${activeTab === "marathon" ? "bg-rose-600 text-white font-bold border-2 border-yellow-400" : "bg-rose-800 text-white hover:bg-rose-700"}`} onClick={() => setActiveTab("marathon")}>
                   Marathon
                 </button>
               </div>
