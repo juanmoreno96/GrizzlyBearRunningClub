@@ -58,9 +58,40 @@ const Tips = () => {
               <a href="#laredoMarathon" className="hover:underline">
                 From Spectator to Finisher: My Laredo Marathon Journey (November 16, 2025)
               </a>
+              <a href="#austinMarathon" className="hover:underline">
+                At the end of the road Austin Marathon (January 15, 2026)
+              </a>
             </div>
           </div>
       </div>
+      <h2 id="austinMarathon" className="text-3xl text-center font-bold mb-4">End of the Road: GBRC 2025-26 Season Finale (January 15, 2026)</h2>
+        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
+          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
+            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
+              <Image
+                src="/blogPhotos/gbrc_austin_blog.png"
+                alt="GBRC 2025-26 Season Finale Group Photo"
+                width={600}
+                height={400}
+                className="object-cover w-full h-full"
+                style={{ objectPosition: '50% 0%' }}
+              />
+            </div>
+          </div>
+          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
+            <ul className="space-y-1">
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                <p className="text-gray-600">What started as jokes between three friends finding a new love for running has become a thriving community. Five races completed, countless miles logged, and unforgettable friendships forged on the pavement.
+                </p> 
+              </li>
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                <p className="text-gray-600">Now, as we approach the end of the 2025-26 racing season, we&apos;re preparing for our final chapter: the Austin Marathon. This is where it all started, and this is where we finish—together.
+                </p>
+                <a href="/blog/blogStories/austinMarathonBlog" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about End of the Road: GBRC 2025-26 Season Finale">Read more...</a>
+              </li>
+            </ul> 
+          </div>
+        </div> 
       <h2 id="laredoMarathon" className="text-3xl text-center font-bold mb-4">From Spectator to Finisher: My Laredo Marathon Journey (November 16, 2025)</h2>
         <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
           <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
