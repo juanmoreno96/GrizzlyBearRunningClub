@@ -61,9 +61,39 @@ const Tips = () => {
               <a href="#austinMarathon" className="hover:underline">
                 At the end of the road Austin Marathon (January 15, 2026)
               </a>
+              <a href="#madeOfIron" className="hover:underline">
+                Made of Iron: My Austin Marathon Journey (February 15, 2026)
+              </a>
             </div>
           </div>
       </div>
+      <h2 id="madeOfIron" className="text-3xl text-center font-bold mb-4">Made of Iron: My Austin Marathon Journey (February 15, 2026)</h2>
+        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
+          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
+            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
+              <Image
+                src="/blogPhotos/austinMarathon26/austinMarathon_johny_running.jpg"
+                alt="Johny running during the Austin Marathon"
+                width={600}
+                height={400}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
+            <ul className="space-y-1">
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                <p className="text-gray-600">I have been overweight for as long as I can remember. Two years ago, I would have laughed if someone told me I&apos;d sign up for a marathon — let alone finish one.
+                </p> 
+              </li>
+              <li className="p-4 bg-gray-100 rounded-lg shadow">
+                <p className="text-gray-600">But that day, in Austin, I proved something to myself that no one can ever take away: I am not the kid watching runners through a car window anymore. I am made of iron.
+                </p>
+                <a href="/blog/blogStories/austinmarathonrun26" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about Made of Iron: My Austin Marathon Journey">Read more...</a>
+              </li>
+            </ul> 
+          </div>
+        </div> 
       <h2 id="austinMarathon" className="text-3xl text-center font-bold mb-4">End of the Road: GBRC 2025-26 Season Finale (January 15, 2026)</h2>
         <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
           <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
