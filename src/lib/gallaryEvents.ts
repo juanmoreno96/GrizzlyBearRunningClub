@@ -15,5 +15,10 @@ export const galleryEvents: { id: string; src: string; alt: string; width: numbe
   { id: "imgE15", src: "/blogPhotos/laredo_marathon_johny_friend.jpg", alt: "laredo half marathon before group", width: 800, height: 600 },
   { id: "imgE16", src: "/blogPhotos/laredo_marathon_johny_mom_bear.jpg", alt: "laredo half marathon starting line", width: 800, height: 600 },
   { id: "imgE17", src: "/blogPhotos/laredo_marathon_johny_mom.jpg", alt: "laredo half marathon running event", width: 800, height: 600 },
+  { id: "imgE18", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_running.jpg", alt: "Johny running during the Austin Marathon", width: 800, height: 600 },
+  { id: "imgE19", src: "/blogPhotos/austinMarathon26/austinMarathon_running_crowd.JPG", alt: "Running crowd at Austin Marathon", width: 800, height: 600 },
+  { id: "imgE20", src: "/blogPhotos/austinMarathon26/austinMarathon_capitol_and_johny.JPG", alt: "Capitol and Johny at Austin Marathon finish line", width: 800, height: 600 },
+  { id: "imgE21", src: "/blogPhotos/austinMarathon26/austinMarathon_team_photo_with_medals.jpg", alt: "Team photo with medals at Austin Marathon", width: 800, height: 600 },
+  { id: "imgE22", src: "/blogPhotos/austinMarathon26/austinMarathon_medals_with_bbq.JPG", alt: "Austin Marathon medals with BBQ celebration", width: 800, height: 600 },
 ];
 export default galleryEvents;

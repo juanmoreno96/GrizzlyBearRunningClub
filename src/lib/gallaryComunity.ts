@@ -16,6 +16,13 @@ export const galleryCommunity: { id: string; src: string; alt: string; width: nu
   { id: "imgC14", src: "/blogPhotos/dia_de_lost_muerto_culture.jpg", alt: "dia de lost muertos event", width: 800, height: 600 },
   { id: "imgC15", src: "/blogPhotos/laredo_marathon_group.jpg", alt: "Laredo half marathon group photo", width: 800, height: 600 },
   { id: "imgC16", src: "/blogPhotos/laredo_marathon_john_friend_bear.jpg", alt: "Laredo half marathon after group photo", width: 800, height: 600 },
+  { id: "imgC17", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_looking_at_map.jpg", alt: "Johny looking at the Austin Marathon map", width: 800, height: 600 },
+  { id: "imgC18", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_pointing_at_map.jpg", alt: "Johny pointing at the marathon route", width: 800, height: 600 },
+  { id: "imgC20", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_holding_medals.JPG", alt: "Johny holding his Austin Marathon medals", width: 800, height: 600 },
+  { id: "imgC22", src: "/blogPhotos/austinMarathon26/austinMarathon_medals_on_counter.JPG", alt: "Austin Marathon medals displayed on counter", width: 800, height: 600 },
+  { id: "imgC23", src: "/blogPhotos/austinMarathon26/austinMarathon_medals_closeup.JPG", alt: "Close-up of the Austin Marathon medals", width: 800, height: 600 },
+  { id: "imgC24", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_dad_sitting.JPG", alt: "Johny's dad sitting with the Austin Marathon medals", width: 800, height: 600 },
+  { id: "imgC25", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_and_buckies.JPG", alt: "Johny and friends celebrating the Austin Marathon finish", width: 800, height: 600 },
 ];
 
 export default galleryCommunity;
