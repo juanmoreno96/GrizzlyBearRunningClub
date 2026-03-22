@@ -1,47 +1,26 @@
 "use client";
-import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import LoadingThreeDotsJumping from "../components/LoadingThreeDotsJumping"; // Import the loading dots component
+import LoadingContent from "../components/LoadingContent";
+import Head from "next/head";
 
 
-const Tips = () => {
-  const [isLoading, setIsLoading] = useState(true); // State to track loading
-
-  useEffect(() => {
-    // Wait for all resources to load with a minimum delay
-    const handleLoad = () => {
-      setTimeout(() => {
-        setIsLoading(false); // Set loading to false after everything is loaded
-      }, 500); // Minimum wait of half a second
-    };
-
-    if (document.readyState === "complete") {
-      // If the page is already loaded
-      handleLoad();
-    } else {
-      // Add event listener for when the page finishes loading
-      window.addEventListener("load", handleLoad);
-    }
-
-    return () => {
-      window.removeEventListener("load", handleLoad); // Cleanup event listener
-    };
-  }, []);
+const Blog = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-rose-950 text-white">
-      {isLoading ? (
-        // Loading dots animation
-        <div className="fixed inset-0 flex flex-col items-center justify-center bg-rose-950 z-50">
-          <Navbar />
-          <LoadingThreeDotsJumping />
-        </div>
-      ) : ( <>  
-      
-      <div className="bg-diagonal-stripes">
-        <div className="max-w-screen-2xl mx-auto p-6">
-          <div className="mt-24 bg-black/80 text-white py-2 px-4 rounded-full mb-4 inline-block">
+    <LoadingContent>
+      <Head>
+        <title>Grizzly Bear Running Club | Blog</title>
+        <meta name="description" content="Read running stories, race recaps, and member experiences from the Grizzly Bear Running Club. Follow our journey from 5K to marathon." />
+        <meta name="keywords" content="running blog, race recaps, marathon stories, runner experiences, Laredo running community" />
+        <meta property="og:title" content="Grizzly Bear Running Club | Blog" />
+        <meta property="og:description" content="Read running stories and race recaps from our running community." />
+        <meta property="og:url" content="https://grizzlybearrunningclub.com/blog" />
+        <meta property="og:type" content="website" />
+      </Head>
+      <div className="min-h-screen flex flex-col bg-rose-950 text-white">
+        <div className="bg-diagonal-stripes">
+          <div className="max-w-screen-2xl mx-auto p-6">
+            <div className="mt-24 bg-black/80 text-white py-2 px-4 rounded-full mb-4 inline-block">
             <div className="container mx-auto flex flex-col items-center">
               <a href="#yearOftransformation" className="hover:underline">
                 Year of Transformation (March 23, 2025)
@@ -265,10 +244,9 @@ const Tips = () => {
         </div>
         </div>
       <Footer />
-      </>)}
-      
-    </div>
+      </div>
+    </LoadingContent>
   );
 };
 
-export default Tips;
+export default Blog;

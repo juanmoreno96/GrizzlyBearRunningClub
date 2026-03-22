@@ -1,8 +1,18 @@
 import AthleticsVideoGallery from "../components/athleticsVideoGallery";
 import Image from "next/image";
+import Head from "next/head";
 const Athletics = () => {
   return (
     <div className="bg-stone-950 text-white">
+      <Head>
+        <title>Grizzly Bear Athletic Club | Strength Training</title>
+        <meta name="description" content="Welcome to Grizzly Bear Athletics - our strength training and weightlifting program. Build physical and mental strength with our community." />
+        <meta name="keywords" content="strength training, weightlifting, athletic club, fitness, Grizzly Bear Athletics, iron paradise, gym training" />
+        <meta property="og:title" content="Grizzly Bear Athletic Club | Strength Training" />
+        <meta property="og:description" content="Build strength and discipline with the Grizzly Bear Athletics program." />
+        <meta property="og:url" content="https://grizzlybearrunningclub.com/athletic" />
+        <meta property="og:type" content="website" />
+      </Head>
 
         <div className="">
           <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
