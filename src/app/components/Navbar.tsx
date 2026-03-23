@@ -25,12 +25,13 @@ export default function Navbar() {
     { name: "Events", path: "/events" },
     { name: "Tips", path: "/tips" },
     { name: "Blog", path: "/blog" },
-    {
-      name: "Join Us",
+    { 
+      name: "Join Us", 
+      path: "/contact",
       children: [
         { name: "Running", path: "/contact" },
         { name: "Athletic", path: "/athletic" },
-      ],
+      ]
     },
   ];
 
@@ -66,8 +67,36 @@ export default function Navbar() {
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex space-x-6">
-        {navItems.map((item) =>
-          !item.children ? (
+        {navItems.map((item) => (
+          item.children ? (
+            <div key={item.path} className="relative group flex items-center">
+              <Link
+                href={item.path}
+                className={`px-3 py-2 rounded-md transition duration-300 cursor-pointer ${
+                  pathname === item.path || pathname?.startsWith(item.path.split('/')[1] ? `/${item.path.split('/')[1]}` : '')
+                    ? "text-red-400"
+                    : "hover:text-red-500"
+                }`}
+              >
+                {item.name}
+              </Link>
+              <div className="absolute left-0 top-full mt-0 w-40 bg-black/90 backdrop-blur-md rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                {item.children.map((child) => (
+                  <Link
+                    key={child.path}
+                    href={child.path}
+                    className={`block px-4 py-2 first:rounded-t-md last:rounded-b-md transition duration-300 ${
+                      pathname === child.path
+                        ? "text-red-400 bg-red-900/30"
+                        : "hover:text-red-500 hover:bg-white/10"
+                    }`}
+                  >
+                    {child.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : (
             <Link
               key={item.path}
               href={item.path}
@@ -79,31 +108,44 @@ export default function Navbar() {
             >
               {item.name}
             </Link>
-          ) : (
-            <div key={item.name} className="relative group">
-              <button className="px-3 py-2 rounded-md transition duration-300 hover:text-red-500">
+          )
+        ))}
+      </div>
+
+      {/* Mobile Dropdown */}
+      <div className="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full bg-black/80 backdrop-blur-md items-center space-y-4 py-4 md:hidden">
+        {navItems.map((item) => (
+          item.children ? (
+            <div key={item.path} className="w-full px-4">
+              <Link
+                href={item.path}
+                className={`block px-3 py-2 w-full text-center transition duration-300 ${
+                  pathname === item.path
+                    ? "bg-red-900 text-white"
+                    : "hover:text-gray-400"
+                }`}
+                onClick={handleLinkClick}
+              >
                 {item.name}
-              </button>
-              <div className="absolute left-0 mt-2 w-40 bg-black/90 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-50">
+              </Link>
+              <div className="mt-1 space-y-1">
                 {item.children.map((child) => (
                   <Link
                     key={child.path}
                     href={child.path}
-                    className="block px-4 py-2 hover:bg-gray-800 hover:text-red-500"
+                    className={`block px-3 py-2 w-full text-center transition duration-300 ${
+                      pathname === child.path
+                        ? "text-red-400"
+                        : "hover:text-gray-400"
+                    }`}
+                    onClick={handleLinkClick}
                   >
                     {child.name}
                   </Link>
                 ))}
               </div>
             </div>
-          )
-        )}
-      </div>
-
-      {/* Mobile Dropdown */}
-      <div className="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full bg-black/80 backdrop-blur-md items-center space-y-4 py-4 md:hidden">
-        {navItems.map((item) =>
-          !item.children ? (
+          ) : (
             <Link
               key={item.path}
               href={item.path}
@@ -116,37 +158,8 @@ export default function Navbar() {
             >
               {item.name}
             </Link>
-          ) : (
-            <div key={item.name} className="w-full">
-              <div className="px-3 py-2 w-full text-center font-semibold bg-gray-800 text-white rounded mb-1 flex items-center justify-center">
-                {item.name}
-                <svg
-                  className="ml-2 w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-              {item.children.map((child) => (
-                <Link
-                  key={child.path}
-                  href={child.path}
-                  className="block px-6 py-2 w-full text-center hover:bg-gray-800"
-                  onClick={handleLinkClick}
-                >
-                  {child.name}
-                </Link>
-              ))}
-            </div>
           )
-        )}
+        ))}
       </div>
     </nav>
   );

@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
-import { galleryEvents } from "../../lib/gallaryEvents";
-import { galleryCommunity } from "../../lib/gallaryComunity";
-import { galleryTrails } from "../../lib/gallaryTrails";
+import { galleryEvents } from "../../lib/galleryEvents";
+import { galleryCommunity } from "../../lib/galleryCommunity";
+import { galleryTrails } from "../../lib/galleryTrails";
 import "swiper/css";
 import "swiper/css/autoplay";
 

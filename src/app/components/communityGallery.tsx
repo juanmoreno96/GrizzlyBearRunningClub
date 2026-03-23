@@ -1,7 +1,7 @@
-import { galleryCommunity } from "../../lib/gallaryComunity";
+import { galleryCommunity } from "../../lib/galleryCommunity";
 import Image from "next/image";
 
-const GridGallary = () => {
+const GridGallery = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-diagonal-stripes p-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-screen-2xl">
@@ -32,4 +32,4 @@ const GridGallary = () => {
   );
 }
 
-export default GridGallary;
+export default GridGallery;

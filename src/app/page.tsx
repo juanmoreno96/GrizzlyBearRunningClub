@@ -52,8 +52,17 @@ export default function Home() {
           name="description"
           content="Join the Grizzly Bear Running Club for fun, friendly group runs and running tips. Open to all levels, we meet weekly to stay active and build community."
         />
+        <meta name="keywords" content="running club, Laredo running, group runs, marathon training, 5K, 10K, half marathon, fitness, community running" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
+        <meta property="og:title" content="Grizzly Bear Running Club | Fun Group Runs & Community Fitness" />
+        <meta property="og:description" content="Join the Grizzly Bear Running Club for fun, friendly group runs and running tips. Open to all levels in Laredo, TX." />
+        <meta property="og:image" content="https://grizzlybearrunningclub.com/bannerPhotos/home-banner.jpg" />
+        <meta property="og:url" content="https://grizzlybearrunningclub.com" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Grizzly Bear Running Club" />
+        <meta name="twitter:description" content="Join the Grizzly Bear Running Club for fun, friendly group runs and running tips." />
       </Head>
       
       <div className="relative">
@@ -131,10 +140,8 @@ export default function Home() {
                   <ChevronDown className="h-8 w-8" />
                 </button>
             </div>
-          </>
-        )}
-      </div>
-      {/* MAIN PAGE CONTENT: This appears once the hero section has fully shrunk.
+
+            {/* MAIN PAGE CONTENT: This appears once the hero section has fully shrunk.
                 It starts right after the (now smaller) hero.
             */}
             <div id = "news-section">
@@ -203,6 +210,9 @@ export default function Home() {
               </section>
             </main>
             </div>
+          </>
+        )}
+      </div>
             
       <Footer />
     </>

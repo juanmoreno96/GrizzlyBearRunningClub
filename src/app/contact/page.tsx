@@ -35,11 +35,12 @@ const JoinUs = () => {
   return (
     <>
     <Head>
-      <title>Join the Grizzly Bear Running Club | Our Story & How to Connect</title>
+      <title>Join the Grizzly Bear Running Club | Running</title>
       <meta
       name="description"
-      content="Learn more about the Grizzly Bear Running Club, our community story, and how you can join us for runs, hikes, and good vibes in Laredo, Texas."
+      content="Join the Grizzly Bear Running Club in Laredo, TX. Sign up for our running group, participate in marathons, 5K, 10K, and half marathon events. All levels welcome!"
       />
+      <meta name="keywords" content="join running club, Laredo running, marathon sign up, 5K, 10K, half marathon, running group, fitness community" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="UTF-8" />
 
@@ -47,13 +48,17 @@ const JoinUs = () => {
       <meta property="og:title" content="Join the Grizzly Bear Running Club" />
       <meta
       property="og:description"
-      content="Discover how our community began and find out how to join our running events in Laredo, TX."
+      content="Join our running community in Laredo, TX. All levels welcome - from beginners to marathon runners."
       />
       <meta
       property="og:url"
       content="https://grizzlybearrunningclub.com/contact"
       />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://grizzlybearrunningclub.com/bannerPhotos/events-banner.jpg" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Join the Grizzly Bear Running Club" />
+      <meta name="twitter:description" content="Join our running community in Laredo, TX. All levels welcome!" />
     </Head>
     <div className="min-h-screen flex flex-col bg-rose-950 text-white">
       {isLoading ? (

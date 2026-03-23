@@ -1,5 +1,5 @@
 export const galleryCommunity: { id: string; src: string; alt: string; width: number; height: number }[] = [
-  { id: "imgC22", src: "/gallery/community/bearfamilycasa5kccomun.jpg", alt: "Family of runners together before the race", width: 800, height: 600 },
+  { id: "imgC19", src: "/gallery/community/bearfamilycasa5kccomun.jpg", alt: "Family of runners together before the race", width: 800, height: 600 },
   { id: "imgC1", src: "/gallery/community/479516505_632810909154728_9215783616045434829_n.jpg", alt: "Group photo from a community run", width: 800, height: 600 },
   { id: "imgC2", src: "/gallery/community/DSC00484.jpg", alt: "Runners on a shaded trail", width: 800, height: 600 },
   { id: "imgC3", src: "/gallery/community/trioOg.jpg", alt: "Three runners posing together", width: 800, height: 600 },
@@ -19,7 +19,7 @@ export const galleryCommunity: { id: string; src: string; alt: string; width: nu
   { id: "imgC17", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_looking_at_map.jpg", alt: "Johny looking at the Austin Marathon map", width: 800, height: 600 },
   { id: "imgC18", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_pointing_at_map.jpg", alt: "Johny pointing at the marathon route", width: 800, height: 600 },
   { id: "imgC20", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_holding_medals.JPG", alt: "Johny holding his Austin Marathon medals", width: 800, height: 600 },
-  { id: "imgC22", src: "/blogPhotos/austinMarathon26/austinMarathon_medals_on_counter.JPG", alt: "Austin Marathon medals displayed on counter", width: 800, height: 600 },
+  { id: "imgC21", src: "/blogPhotos/austinMarathon26/austinMarathon_medals_on_counter.JPG", alt: "Austin Marathon medals displayed on counter", width: 800, height: 600 },
   { id: "imgC23", src: "/blogPhotos/austinMarathon26/austinMarathon_medals_closeup.JPG", alt: "Close-up of the Austin Marathon medals", width: 800, height: 600 },
   { id: "imgC24", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_dad_sitting.JPG", alt: "Johny's dad sitting with the Austin Marathon medals", width: 800, height: 600 },
   { id: "imgC25", src: "/blogPhotos/austinMarathon26/austinMarathon_johny_and_buckies.JPG", alt: "Johny and friends celebrating the Austin Marathon finish", width: 800, height: 600 },
