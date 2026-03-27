@@ -1,250 +1,231 @@
 "use client";
+import { useState } from "react";
 import Footer from "../components/footer";
 import Image from "next/image";
 import LoadingContent from "../components/LoadingContent";
 import Head from "next/head";
 
-
 const Blog = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All Stories");
+  const categories = ["All Stories", "Training", "Race Reports","Community"];
+
+  const categoryButtonClass = (category: string) =>
+    `px-6 py-2 rounded-full font-label text-xs uppercase tracking-wider whitespace-nowrap transition-colors ${
+      selectedCategory === category
+        ? 'bg-primary text-white'
+        : 'bg-surface-container-high text-on-surface-variant hover:bg-surface-variant'
+    }`;
+
+  const blogs = [
+    {
+      id: 'madeOfIron',
+      title: 'Made of Iron: My Austin Marathon Journey',
+      date: 'February 15, 2026',
+      category: 'Race Reports',
+      image: '/blogPhotos/austinMarathon26/austinMarathon_johny_running.jpg',
+      excerpt: 'Twenty-six miles of grit, elevation, and the relentless heat of the Texas sun. Here\'s how I pushed through the wall at mile 20 and found a new version of myself.',
+      link: '/blog/blogStories/austinmarathonrun26',
+      featured: true
+    },
+    {
+      id: 'austinMarathon',
+      title: 'End of the Road: GBRC 2025-26 Season Finale',
+      date: 'January 15, 2026',
+      category: 'Community',
+      image: '/blogPhotos/gbrc_austin_blog.png',
+      excerpt: 'What started as jokes between three friends finding a new love for running has become a thriving community. Five races completed, countless miles logged, and unforgettable friendships forged on the pavement.',
+      link: '/blog/blogStories/austinMarathonBlog'
+    },
+    {
+      id: 'laredoMarathon',
+      title: 'From Spectator to Finisher: My Laredo Marathon Journey',
+      date: 'November 16, 2025',
+      category: 'Race Reports',
+      image: '/blogPhotos/laredo_marathon_group.jpg',
+      excerpt: 'Two years ago, I watched runners cross McPherson Street and thought, "There\'s no way a fat guy like me could ever do that." Fast forward to 2025: I found myself at the starting line of the Laredo Marathon.',
+      link: '/blog/blogStories/laredoMarathonBlog'
+    },
+    {
+      id: 'diaDeMuertos',
+      title: 'What a Night! Our Día de los Muertos 5K Glow Run',
+      date: 'November 01, 2025',
+      category: 'Community',
+      image: '/blogPhotos/dia_del_lost_muerto_all_group.jpg',
+      excerpt: 'This past weekend was truly special for the Grizzly Bear Running Club. We participated in our first nighttime race — the Día de los Muertos 5K Glow Run — and it was an unforgettable experience.',
+      link: '/blog/blogStories/diaDeMuertosBlog'
+    },
+    {
+      id: 'runningTour2025',
+      title: 'Grizzly Bear Running Club Kicks Off Its First Running Tour!',
+      date: 'October 11, 2025',
+      category: 'Community',
+      image: '/blogPhotos/zombieRunTreat.jpeg',
+      excerpt: 'The season\'s just getting started, and so are we! The Grizzly Bear Running Club has officially launched its first-ever Running Tour — here\'s how our first few races went and what\'s coming next.',
+      link: '/blog/blogStories/runningTour2025'
+    },
+    {
+      id: 'mysecond5k',
+      title: 'My Second 5K Race: Chasing the Hour',
+      date: 'April 26, 2025',
+      category: 'Training',
+      image: '/gallery/events/runningBearthreecasa5k.jpg',
+      excerpt: 'Hello! I\'m Juan M, aka Bear — one of the founders of the Grizzly Bear Running Club — and this April, I completed my second 5K race. Why is this race more important than the first? Because this was the first time I went in with a real goal.',
+      link: '/blog/blogStories/mySecondFiveKRace'
+    },
+    {
+      id: 'yearOfTransformation',
+      title: 'A Year of Transformation',
+      date: 'March 23, 2025',
+      category: 'Community',
+      image: '/johnyJourny/johnyfourth.jpg',
+      excerpt: 'A year ago today, I started a journey that, honestly, I never thought I\'d get far in. I\'d tried to lose weight countless times before—so many times, I\'ve lost track of how many failures I\'ve had.',
+      link: '/blog/blogStories/yearOfTransformation'
+    }
+  ];
+
+  const filtered = selectedCategory === "All Stories"
+    ? blogs
+    : blogs.filter((blog) => blog.category === selectedCategory);
+
+  const featured = filtered.find((b) => b.featured);
+  const gridBlogs = filtered.filter((b) => !b.featured);
+
   return (
     <LoadingContent>
       <Head>
-        <title>Grizzly Bear Running Club | Blog</title>
-        <meta name="description" content="Read running stories, race recaps, and member experiences from the Grizzly Bear Running Club. Follow our journey from 5K to marathon." />
-        <meta name="keywords" content="running blog, race recaps, marathon stories, runner experiences, Laredo running community" />
-        <meta property="og:title" content="Grizzly Bear Running Club | Blog" />
-        <meta property="og:description" content="Read running stories and race recaps from our running community." />
-        <meta property="og:url" content="https://grizzlybearrunningclub.com/blog" />
-        <meta property="og:type" content="website" />
+        <title>Grizzly Club Blog | Grizzly Bear Running Club</title>
+        <meta name="description" content="Stories from the trail: running adventures, race recaps, training tips, and community experiences from the Grizzly Bear Running Club." />
       </Head>
-      <div className="min-h-screen flex flex-col bg-rose-950 text-white">
-        <div className="bg-diagonal-stripes">
-          <div className="max-w-screen-2xl mx-auto p-6">
-            <div className="mt-24 bg-black/80 text-white py-2 px-4 rounded-full mb-4 inline-block">
-            <div className="container mx-auto flex flex-col items-center">
-              <a href="#yearOftransformation" className="hover:underline">
-                Year of Transformation (March 23, 2025)
-              </a>
-              <a href="#mysecond5k" className="hover:underline mt-1">
-                My Second 5K Race: Chasing the Hour (April 26, 2025)
-              </a>
-              <a href="#runningRout2025" className="hover:underline">
-                Grizzly Bear Running Club Kicks Off Its First Running Tour! (October 11, 2025)
-              </a>
-              <a href="#diaDeMuertos" className="hover:underline">
-                What a Night! Our Día de los Muertos 5K Glow Run! (November 01, 2025)
-              </a>
-              <a href="#laredoMarathon" className="hover:underline">
-                From Spectator to Finisher: My Laredo Marathon Journey (November 16, 2025)
-              </a>
-              <a href="#austinMarathon" className="hover:underline">
-                At the end of the road Austin Marathon (January 15, 2026)
-              </a>
-              <a href="#madeOfIron" className="hover:underline">
-                Made of Iron: My Austin Marathon Journey (February 15, 2026)
-              </a>
+      <div className="w-full bg-rose-950 bg-diagonal-stripes">
+        <main className="pt-32 pb-20 max-w-7xl mx-auto">
+          {/* Page Header Section */}
+        <header className="mb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="max-w-2xl">
+              <p className="font-label text-secondary font-semibold uppercase tracking-[0.2em] mb-4 text-xs">Stories from the trail</p>
+              <h1 className="text-6xl md:text-7xl font-headline font-extrabold text-white tracking-tight leading-none">
+                Grizzly Club Blog
+              </h1>
+            </div>
+            {/* Simplified Category Filter */}
+            <div className="flex flex-wrap gap-2 pb-2 overflow-x-auto no-scrollbar">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={categoryButtonClass(category)}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
+        </header>
+        {/* Featured Post - Asymmetric Layout */}
+        {featured && (
+          <section className="mb-24">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 bg-surface-container-low rounded-xl overflow-hidden group">
+              <div className="lg:col-span-7 relative h-[400px] lg:h-[600px] overflow-hidden">
+                <Image
+                  src={featured.image}
+                  alt={featured.title}
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-container/40 to-transparent"></div>
+              </div>
+              <div className="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="font-label text-xs uppercase tracking-widest text-secondary font-bold">Featured Story</span>
+                  <span className="w-8 h-[1px] bg-outline-variant"></span>
+                  <span className="font-label text-xs text-on-surface-variant uppercase tracking-wider">8 min read</span>
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-headline font-bold text-primary mb-6 leading-tight">
+                  {featured.title}
+                </h2>
+                <p className="text-on-surface-variant text-lg leading-relaxed mb-8 font-body">
+                  {featured.excerpt}
+                </p>
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="text-sm font-label text-on-surface-variant uppercase tracking-tighter">{featured.date}</span>
+                  <a href={featured.link} className="inline-flex items-center gap-2 font-label text-sm uppercase tracking-widest font-bold text-secondary group/btn">
+                    Read Full Story
+                    <span className="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+        {/* Main Blog Grid - Editorial Rhythm */}
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-12">
+          {gridBlogs.map((blog, index) => (
+            <article key={blog.id} className={`flex flex-col group overflow-visible ${index === 3 ? 'md:col-span-2' : ''}`}>
+              {index === 3 ? (
+                // Asymmetric Large Card
+                <div className="flex flex-col md:flex-row gap-8 items-center bg-surface-container-low p-8 rounded-xl shadow-sm shadow-red-900/5 group">
+                  <div className="w-full md:w-1/2 aspect-video md:aspect-square overflow-hidden rounded-lg">
+                    <Image
+                      src={blog.image}
+                      alt={blog.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="font-label text-[10px] uppercase tracking-[0.2em] px-2 py-1 bg-secondary/10 text-secondary rounded">{blog.category}</span>
+                      <span className="text-xs text-on-surface-variant/60 font-label">{blog.date}</span>
+                    </div>
+                    <h3 className="text-3xl font-headline font-bold text-primary mb-6 leading-tight">
+                      {blog.title}
+                    </h3>
+                    <p className="text-on-surface-variant text-base leading-relaxed mb-8 font-body">
+                      {blog.excerpt}
+                    </p>
+                    <a href={blog.link} className="bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-label text-xs uppercase tracking-widest hover:bg-primary transition-colors inline-block text-center">
+                      Full {blog.category === 'Race Reports' ? 'Race Recap' : 'Story'}
+                    </a>
+                  </div>
+                </div>
+              ) : (
+                // Regular Card
+                <div className="bg-surface-container-low rounded-xl flex flex-col min-h-[480px] overflow-visible">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={blog.image}
+                      alt={blog.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col flex-grow justify-between">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="font-label text-[10px] uppercase tracking-[0.2em] px-2 py-1 bg-secondary/10 text-secondary rounded">{blog.category}</span>
+                      <span className="text-xs text-on-surface-variant/60 font-label">{blog.date}</span>
+                    </div>
+                    <h3 className="text-2xl font-headline font-bold text-primary mb-4 leading-snug group-hover:text-secondary transition-colors">
+                      {blog.title}
+                    </h3>
+                    <p className="text-on-surface-variant text-sm leading-relaxed mb-6 font-body">
+                      {blog.excerpt}
+                    </p>
+                    <a href={blog.link} className="mt-auto inline-flex items-center font-label text-xs text-black uppercase tracking-widest font-bold border-b-2 border-secondary/20 pb-1 hover:border-secondary transition-all w-fit">
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              )}
+            </article>
+          ))}
+        </section>
+        
+        </main>
       </div>
-      <h2 id="madeOfIron" className="text-3xl text-center font-bold mb-4">Made of Iron: My Austin Marathon Journey (February 15, 2026)</h2>
-        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
-            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
-              <Image
-                src="/blogPhotos/austinMarathon26/austinMarathon_johny_running.jpg"
-                alt="Johny running during the Austin Marathon"
-                width={600}
-                height={400}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
-            <ul className="space-y-1">
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600">I have been overweight for as long as I can remember. Two years ago, I would have laughed if someone told me I&apos;d sign up for a marathon — let alone finish one.
-                </p> 
-              </li>
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600">But that day, in Austin, I proved something to myself that no one can ever take away: I am not the kid watching runners through a car window anymore. I am made of iron.
-                </p>
-                <a href="/blog/blogStories/austinmarathonrun26" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about Made of Iron: My Austin Marathon Journey">Read more...</a>
-              </li>
-            </ul> 
-          </div>
-        </div> 
-      <h2 id="austinMarathon" className="text-3xl text-center font-bold mb-4">End of the Road: GBRC 2025-26 Season Finale (January 15, 2026)</h2>
-        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
-            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
-              <Image
-                src="/blogPhotos/gbrc_austin_blog.png"
-                alt="GBRC 2025-26 Season Finale Group Photo"
-                width={600}
-                height={400}
-                className="object-cover w-full h-full"
-                style={{ objectPosition: '50% 0%' }}
-              />
-            </div>
-          </div>
-          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
-            <ul className="space-y-1">
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600">What started as jokes between three friends finding a new love for running has become a thriving community. Five races completed, countless miles logged, and unforgettable friendships forged on the pavement.
-                </p> 
-              </li>
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600">Now, as we approach the end of the 2025-26 racing season, we&apos;re preparing for our final chapter: the Austin Marathon. This is where it all started, and this is where we finish—together.
-                </p>
-                <a href="/blog/blogStories/austinMarathonBlog" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about End of the Road: GBRC 2025-26 Season Finale">Read more...</a>
-              </li>
-            </ul> 
-          </div>
-        </div> 
-      <h2 id="laredoMarathon" className="text-3xl text-center font-bold mb-4">From Spectator to Finisher: My Laredo Marathon Journey (November 16, 2025)</h2>
-        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
-            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
-              <Image
-                src="/blogPhotos/laredo_marathon_group.jpg"
-                alt="Día de los Muertos 5K Glow Run Group Photo"
-                width={600}
-                height={400}
-                className="object-cover w-full h-full"
-                style={{ objectPosition: '50% 30%' }}
-              />
-            </div>
-          </div>
-          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
-            <ul className="space-y-1">
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600">Two years ago, I watched runners cross McPherson Street and thought, 
-                  &quot;There&apos;s no way a fat guy like me could ever do that.&quot;
-                </p> 
-              </li>
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600"> Fast forward to 2025: I found myself at the starting line of the Laredo Marathon, 
-                  ready to prove that anything is possible with determination and hard work.
-                </p>
-                <a href="/blog/blogStories/laredoMarathonBlog" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about Día de los Muertos 5K Glow Run">Read more...</a>
-              </li>
-            </ul> 
-          </div>
-        </div> 
-      <h2 id="diaDeMuertos" className="text-3xl text-center font-bold mb-4">What a Night! Our Día de los Muertos 5K Glow Run (November 01, 2025)</h2>
-        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
-            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
-              <Image
-                src="/blogPhotos/dia_del_lost_muerto_all_group.jpg"
-                alt="Día de los Muertos 5K Glow Run Group Photo"
-                width={600}
-                height={400}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
-            <ul className="space-y-1">
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600">This past weekend was truly special for the Grizzly Bear Running Club. We participated in our first nighttime race — the Día de los Muertos 5K Glow Run
-                </p> 
-              </li>
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600">— and it was an unforgettable experience filled with party lights, mariachi music, and a celebration of culture and community.
-                </p>
-                <a href="/blog/blogStories/diaDeMuertosBlog" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about Día de los Muertos 5K Glow Run">Read more...</a>
-              </li>
-            </ul> 
-          </div>
-        </div>
-        <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
-
-      <h2 id= "runningRout2025"className="text-3xl text-center font-bold mb-4">Grizzly Bear Running Club Kicks Off Its First Running Tour! (October 11, 2025)</h2>
-        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
-            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[200px] md:h-[300px]">
-          <Image
-            src="/blogPhotos/zombieRunTreat.jpeg"
-            alt="Zombie Run Event Image"
-            width={600}
-            height={400}
-            className="object-cover w-full h-full"
-          />
-            </div>
-          </div>
-          <div className="col-span- w-full p-6 shadow-lg rounded-xl bg-white">
-            <ul className="space-y-1">
-          <li className="p-4 bg-gray-100 rounded-lg shadow">
-            <p className="text-gray-600">The season’s just getting started, and so are we! The Grizzly Bear Running Club has officially launched its first-ever Running Tour
-            </p> 
-          </li>
-          <li className="p-4 bg-gray-100 rounded-lg shadow">
-            <p className="text-gray-600">— here’s how our first few races went and what’s coming next.
-             </p>
-            <a href="/blog/blogStories/runningTour2025" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about My Second 5K Race">Read more...</a>
-          </li>
-            
-            </ul> 
-          </div>
-        </div>
-      <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
-      <h2 id= "mysecond5k"className="text-3xl text-center font-bold mb-4">My Second 5K Race: Chasing the Hour (April 26, 2025)</h2>
-        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-          <div className="w-full md:col-span-2 p-6 flex items-center justify-center bg-transparent">
-            <div className="overflow-hidden rounded-lg shadow-lg w-full h-[420px] md:h-[600px]">
-          <Image
-            src="/gallery/events/runningBearthreecasa5k.jpg"
-            alt="Contact Image"
-            width={1200}
-            height={800}
-            className="object-cover w-full h-full"
-          />
-            </div>
-          </div>
-          <div className="col-span-1 w-full p-6 shadow-lg rounded-xl bg-white">
-            <ul className="space-y-1">
-          <li className="p-4 bg-gray-100 rounded-lg shadow">
-            <p className="text-gray-600">Hello! I&apos;m Juan M, aka Bear — one of the founders of the Grizzly Bear Running Club — and this April, I completed my second 5K race.
-            </p> 
-            <p className="text-gray-600">Why is this race more important than the first? Because this was the first time I went in with a real goal: I wanted to beat my previous time and finish under an hour.
-            </p>
-            <a href="/blog/blogStories/mySecondFiveKRace" className="text-blue-600 hover:text-blue-800 hover:underline mt-2 inline-block" aria-label="Read more about My Second 5K Race">Read more...</a>
-          </li>
-            </ul> 
-          </div>
-        </div>
-      <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
-        <h2 id= "yearOftransformation"className="text-3xl text-center font-bold mb-4">A Year of Transformation (March 23, 2025)</h2>
-      <div className="flex-grow grid grid-cols-1 md:grid-cols-3 gap-4 p-5 max-w-screen-2xl mx-auto">
-        <div className="w-full max-w-screen-2xl mx-auto p-6 flex items-center justify-center">
-          <div className="overflow-hidden rounded-lg shadow-lg w-full h-[500px]">
-            <Image 
-              src="/johnyJourny/johnyfourth.jpg" 
-              alt="Contact Image" 
-              width={800} 
-              height={600}
-              className="object-cover w-full h-full" 
-            />
-          </div>
-        </div>
-        <div className="col-span-2 w-full max-w-screen-2xl mx-auto p-6 bg-white shadow-lg rounded-xl">
-            <ul className="space-y-4">
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                <p className="text-gray-600">A year ago today, I started a journey that, honestly, I never thought I’d get far in. I’d tried to lose weight countless times before—so many times, I’ve lost track of how many failures I’ve had. Each attempt had its small victories, but nothing ever seemed to stick.
-                </p>
-              </li>
-              <li className="p-4 bg-gray-100 rounded-lg shadow">
-                  <p className="text-gray-600">Like many others on a weight-loss journey, I had a general idea of what needed to be done: move more, eat better. But I had no clue how to start. It felt like trying to write an essay without knowing the topic. But, one thing I remembered from school was the importance of just starting, even if it was messy. So, I began with simple steps: walking after work, cutting out soda, and eating less fast food. It wasn&apos;t much, but it was something.
-                  </p>
-                  <a href="/blog/blogStories/yearOfTransformation" className="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
-              </li>
-            </ul> 
-          </div>
-        </div>
-        </div>
       <Footer />
-      </div>
     </LoadingContent>
   );
 };

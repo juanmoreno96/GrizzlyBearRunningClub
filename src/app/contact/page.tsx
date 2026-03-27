@@ -3,154 +3,259 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import LoadingThreeDotsJumping from "../components/LoadingThreeDotsJumping"; // Import the new loading component
+import LoadingContent from "../components/LoadingContent";
 import Head from "next/head";
-import { Instagram, Activity } from "lucide-react";
+import { Instagram, Activity, MapPin, Mail, Clock } from "lucide-react";
 
 const JoinUs = () => {
-  const [isLoading, setIsLoading] = useState(true); // State to track loading
-
-  useEffect(() => {
-    // Wait for all resources to load with a minimum delay
-    const handleLoad = () => {
-      setTimeout(() => {
-        setIsLoading(false); // Set loading to false after everything is loaded
-      }, 500); // Minimum wait of half a second
-    };
-
-    if (document.readyState === "complete") {
-      // If the page is already loaded
-      handleLoad();
-    } else {
-      // Add event listener for when the page finishes loading
-      window.addEventListener("load", handleLoad);
-    }
-
-    return () => {
-      window.removeEventListener("load", handleLoad); // Cleanup event listener
-    };
-  }, []);
-
   return (
-    <>
-    <Head>
-      <title>Join the Grizzly Bear Running Club | Running</title>
-      <meta
-      name="description"
-      content="Join the Grizzly Bear Running Club in Laredo, TX. Sign up for our running group, participate in marathons, 5K, 10K, and half marathon events. All levels welcome!"
-      />
-      <meta name="keywords" content="join running club, Laredo running, marathon sign up, 5K, 10K, half marathon, running group, fitness community" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="UTF-8" />
+    <LoadingContent>
+      <Head>
+        <title>Join the Grizzly Bear Running Club | Running</title>
+        <meta
+          name="description"
+          content="Join the Grizzly Bear Running Club in Laredo, TX. Sign up for our running group, participate in marathons, 5K, 10K, and half marathon events. All levels welcome!"
+        />
+        <meta name="keywords" content="join running club, Laredo running, marathon sign up, 5K, 10K, half marathon, running group, fitness community" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
+        <meta property="og:title" content="Join the Grizzly Bear Running Club" />
+        <meta property="og:description" content="Join our running community in Laredo, TX. All levels welcome - from beginners to marathon runners." />
+        <meta property="og:url" content="https://grizzlybearrunningclub.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://grizzlybearrunningclub.com/bannerPhotos/events-banner.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Join the Grizzly Bear Running Club" />
+        <meta name="twitter:description" content="Join our running community in Laredo, TX. All levels welcome!" />
+      </Head>
 
-      {/* Open Graph (OG) Tags for Social Sharing */}
-      <meta property="og:title" content="Join the Grizzly Bear Running Club" />
-      <meta
-      property="og:description"
-      content="Join our running community in Laredo, TX. All levels welcome - from beginners to marathon runners."
-      />
-      <meta
-      property="og:url"
-      content="https://grizzlybearrunningclub.com/contact"
-      />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://grizzlybearrunningclub.com/bannerPhotos/events-banner.jpg" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Join the Grizzly Bear Running Club" />
-      <meta name="twitter:description" content="Join our running community in Laredo, TX. All levels welcome!" />
-    </Head>
-    <div className="min-h-screen flex flex-col bg-rose-950 text-white">
-      {isLoading ? (
-        // Replace the existing loading animation with the new component
-        <div className="fixed inset-0 flex flex-col items-center justify-center bg-rose-950 z-50">
-          <Navbar />
-          <LoadingThreeDotsJumping />
+      <div className="min-h-screen flex flex-col bg-rose-950 text-on-surface bg-diagonal-stripes">
+        <Navbar />
+
+        {/* Hero Section */}
+        <div className="relative">
+          <div className="absolute inset-0 h-[400px] md:h-[500px] overflow-hidden">
+            <Image
+              src="/bannerPhotos/lunaEars.jpg"
+              alt="Hero"
+              fill
+              className="object-cover object-[center_bottom]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/30 to-rose-950" />
+          </div>
+          <header className="relative max-w-7xl mx-auto px-6 pt-48 pb-16">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+              <div className="max-w-2xl">
+                <span className="font-label text-secondary font-semibold tracking-widest uppercase text-xs mb-4 block">Get In Touch</span>
+                <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[0.9]">Never Run <span className="text-secondary">Alone.</span></h1>
+                <p className="mt-6 text-white/90 text-lg md:text-xl font-medium leading-relaxed">Join the pack. From sunrise community sprints to high-altitude marathons, find your next challenge below.</p>
+              </div>
+            </div>
+          </header>
         </div>
-      ) : (
-        // Main content
-        <>
-          <div className="absolute inset-0 h-1/3 bg-cover bg-center bg-[url('/bannerPhotos/lunaEars.jpg')] opacity-80 bg-[center_top_82%]"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent"></div>
-          <div className="bg-diagonal-stripes">
-            <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 mt-24 flex-grow max-w-screen-2xl mx-auto">
-            <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6 text-center bg-black/10 backdrop-blur-md md:text-center p-5">
-              <h1 className="text-3xl font-bold mb-4">Our Story</h1>
-              <p className="text-left leading-loose">
-                Grizzly Bear Running Club started with a simple drawing of a bear with a backpack and a newfound love for running and hiking. What began as just an idea soon became a community built on adventure, perseverance, and the joy of movement.
-              </p>
-              <p className="text-left leading-loose">
-                We may not be the fastest on the trails, but we believe in welcoming everyone—whether you&#39;re sprinting up mountains or taking it one step at a time. Join us as we explore the outdoors, embrace the challenge, and grow together, one run and hike at a time.
-              </p>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <Image src="/gallery/community/trioOg.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
+
+        {/* Our Story Section */}
+        <section className="max-w-7xl mx-auto px-6 pb-20">
+          <div className="bg-surface-container-low rounded-2xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <span className="font-label text-secondary text-xs font-bold uppercase tracking-widest mb-4">Our Story</span>
+                <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-on-surface mb-6">Started with a Bear & a Dream</h2>
+                <p className="text-on-surface-variant mb-4 leading-relaxed">
+                  Grizzly Bear Running Club started with a simple drawing of a bear with a backpack and a newfound love for running and hiking. What began as just an idea soon became a community built on adventure, perseverance, and the joy of movement.
+                </p>
+                <p className="text-on-surface-variant leading-relaxed">
+                  We may not be the fastest on the trails, but we believe in welcoming everyone—whether you&apos;re sprinting up mountains or taking it one step at a time. Join us as we explore the outdoors, embrace the challenge, and grow together, one run and hike at a time.
+                </p>
+              </div>
+              <div className="relative h-64 md:h-full min-h-[300px] lg:min-h-[400px]">
+                <Image
+                  src="/gallery/community/trioOg.jpg"
+                  alt="Our Story"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
-          <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
+        </section>
 
-          <div className="relative w-full h-96 mt-12 max-w-screen-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Join us in our runs</h2>
-            <h3 className="mb-4">Laredo, TX</h3>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7071.515790563925!2d-99.47216621602932!3d27.601034662518988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866120a0e58514df%3A0x71da9bd4c3366a59!2sNorth%20Central%20Park!5e0!3m2!1sen!2sus!4v1739734318047!5m2!1sen!2sus"
-              width="100%"
-              height="90%"
-              frameBorder="0"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              aria-hidden="false"
-              tabIndex={0}
-            ></iframe>
+        {/* Locations Section */}
+        <section className="max-w-7xl mx-auto px-6 pb-20">
+          <div className="mb-8">
+            <span className="font-label text-secondary font-semibold tracking-widest uppercase text-xs mb-2 block">Find Us</span>
+            <h2 className="font-headline text-3xl md:text-5xl font-extrabold text-white">Join Us on Our Runs</h2>
           </div>
-            <div className="relative w-full h-96 mt-16 max-w-screen-2xl mx-auto">
-            <h3 className="mb-4">Round Rock, TX</h3>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1718.262874972042!2d-97.62584750520374!3d30.53444670403131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644d08a6a9e92f7%3A0x121c91cd8529a794!2sVirgil%20Rabb%20Pavilion!5e0!3m2!1sen!2sus!4v1757206662661!5m2!1sen!2sus"
-              width="100%"
-              height="90%"
-              frameBorder="0"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              aria-hidden="false"
-              tabIndex={0}
-            ></iframe>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Laredo */}
+            <div className="bg-surface-container-low rounded-xl overflow-hidden">
+              <div className="relative h-64">
+                <Image
+                  src="/gallery/community/lunaEars.jpg"
+                  alt="Laredo"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
+                <div className="absolute bottom-6 left-6">
+                  <h3 className="font-headline text-3xl md:text-4xl font-bold text-white">Laredo, TX</h3>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <MapPin className="w-5 h-5 text-secondary" />
+                  <span className="text-on-surface-variant">North Central Park</span>
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Clock className="w-5 h-5 text-secondary" />
+                  <span className="text-on-surface-variant">Every Wednesday, 5:30 AM</span>
+                </div>
+                <div className="h-80 w-full rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7071.515790563925!2d-99.47216621602932!3d27.601034662518988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866120a0e58514df%3A0x71da9bd4c3366a59!2sNorth%20Central%20Park!5e0!3m2!1sen!2sus!4v1739734318047!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
-            <div className="my-16"></div>
 
-          <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700"></hr>
-
-          <div className="relative flex flex-col md:flex-row items-center justify-center w-full px-6 flex-grow max-w-screen-2xl mx-auto">
-            <div className="md:w-1/2 flex justify-center">
-              <Image src="/gallery/merch/merchvtwo.jpg" alt="Contact Image" className="rounded-lg shadow-lg" width={800} height={600} />
-            </div>
-            <div className="md:w-1/2 mt-6 md:mt-0 md:ml-6 text-center bg-black/10 backdrop-blur-md md:text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Connect with Us</h2>
-              <ul className="space-y-4">
-                <li>
-                    <a href="https://www.instagram.com/grizzlybear_runningclub/" className="text-pink-500 hover:underline text-2xl" target="_blank" rel="noopener noreferrer">
-                    <Instagram className="inline-block mr-2 h-6 w-6 text-pink-500" />
-                    Instagram: @grizzlybear_runningclub
-                    </a>
-                </li>
-                <li>
-                  <a href="https://www.strava.com/clubs/1689981" className="text-orange-600 hover:underline text-2xl" target="_blank" rel="noopener noreferrer">
-                  <Activity className="inline-block mr-2 h-6 w-6 text-orange-600" />
-                    Strava: Grizzly Bear Running Club
-                    </a>
-                </li>
-              </ul>
+            {/* Round Rock */}
+            <div className="bg-surface-container-low rounded-xl overflow-hidden">
+              <div className="relative h-64">
+                <Image
+                  src="/gallery/trails/DSC00315.jpg"
+                  alt="Round Rock"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
+                <div className="absolute bottom-6 left-6">
+                  <h3 className="font-headline text-3xl md:text-4xl font-bold text-white">Round Rock, TX</h3>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <MapPin className="w-5 h-5 text-secondary" />
+                  <span className="text-on-surface-variant">Virgil Rabb Pavilion</span>
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Clock className="w-5 h-5 text-secondary" />
+                  <span className="text-on-surface-variant">Weekend Long Runs</span>
+                </div>
+                <div className="h-80 w-full rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1718.262874972042!2d-97.62584750520374!3d30.53444670403131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644d08a6a9e92f7%3A0x121c91cd8529a794!2sVirgil%20Rabb%20Pavilion!5e0!3m2!1sen!2sus!4v1757206662661!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          </div>
-          
+        </section>
 
-          <Footer />
-        </>
-      )}
-    </div>
-    </>
-    
+        {/* Connect With Us Section */}
+        <section className="max-w-7xl mx-auto px-6 pb-20">
+          <div className="bg-surface-container-low rounded-2xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="relative h-64 md:h-full min-h-[300px] lg:min-h-[400px]">
+                <Image
+                  src="/gallery/merch/merchvtwo.jpg"
+                  alt="Connect"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <span className="font-label text-secondary text-xs font-bold uppercase tracking-widest mb-4">Connect With Us</span>
+                <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-on-surface mb-6">Join the Pack</h2>
+                <p className="text-on-surface-variant mb-8 leading-relaxed">
+                  Follow us on social media or come join us for a run. All levels welcome—from first-time runners to seasoned marathoners.
+                </p>
+                <div className="space-y-4">
+                  <a 
+                    href="https://www.instagram.com/grizzlybear_runningclub/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors group"
+                  >
+                    <div className="w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center group-hover:bg-pink-500/30 transition-colors">
+                      <Instagram className="w-6 h-6 text-pink-500" />
+                    </div>
+                    <div>
+                      <p className="font-label text-xs text-on-surface-variant uppercase tracking-wider">Instagram</p>
+                      <p className="font-headline font-bold text-on-surface">@grizzlybear_runningclub</p>
+                    </div>
+                  </a>
+                  <a 
+                    href="https://www.strava.com/clubs/1689981" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors group"
+                  >
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                      <Activity className="w-6 h-6 text-orange-500" />
+                    </div>
+                    <div>
+                      <p className="font-label text-xs text-on-surface-variant uppercase tracking-wider">Strava</p>
+                      <p className="font-headline font-bold text-on-surface">Grizzly Bear Running Club</p>
+                    </div>
+                  </a>
+                  <div className="flex items-center gap-4 p-4 bg-surface-container rounded-xl">
+                    <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+                      <Mail className="w-6 h-6 text-secondary" />
+                    </div>
+                    <div>
+                      <p className="font-label text-xs text-on-surface-variant uppercase tracking-wider">Email</p>
+                      <p className="font-headline font-bold text-on-surface">TBA</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="max-w-3xl mx-auto px-6 pb-12 text-center">
+          <div className="bg-surface-container-lowest p-12 rounded-2xl tonal-shadow">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold text-on-surface mb-4">Ready to Run?</h2>
+            <p className="text-on-surface-variant mb-8">Join us for a run and experience the community yourself. No matter your pace, you&apos;re welcome here.</p>
+            <a 
+              href="https://www.instagram.com/grizzlybear_runningclub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block btn-primary-gradient text-white px-10 py-5 rounded-md font-label font-bold tracking-widest uppercase text-sm shadow-xl hover:scale-[1.02] active:scale-95 transition-all"
+            >
+              Join Us Tomorrow
+            </a>
+          </div>
+        </section>
+
+        {/* Athletic Club CTA Section */}
+        <section className="max-w-3xl mx-auto px-6 pb-24 text-center">
+          <div className="bg-stone-950 p-12 rounded-2xl">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold text-white mb-4">Interested in Powerlifting?</h2>
+            <p className="text-gray-300 mb-8">If you&apos;re interested in powerlifting or lifting, you might like our sister club Grizzly Bear Athletic Club.</p>
+            <a 
+              href="/athletic"
+              className="inline-block bg-white text-black px-10 py-5 rounded-md font-label font-bold tracking-widest uppercase text-sm hover:bg-gray-200 active:scale-95 transition-all"
+            >
+              Visit Grizzly Bear Athletic Club
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <Footer />
+    </LoadingContent>
   );
 };
 
