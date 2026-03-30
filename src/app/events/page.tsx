@@ -284,28 +284,28 @@ src="/bannerPhotos/events-banner.jpg"
                 <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-zinc-200 dark:border-zinc-800">
-                      <th className="py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white">Rank</th>
-                      <th className="py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white">Runner</th>
-                      <th className="py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white text-right">Time</th>
-                      <th className="py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white text-right">Event</th>
-                      <th className="py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white text-right">Location</th>
+                      <th className="py-3 md:py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white">Rank</th>
+                      <th className="py-3 md:py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white">Runner</th>
+                      <th className="py-3 md:py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white text-right">Time</th>
+                      <th className="py-3 md:py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white text-right hidden md:table-cell">Event</th>
+                      <th className="py-3 md:py-4 font-label text-[10px] font-bold uppercase tracking-widest text-white text-right hidden md:table-cell">Location</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-zinc-200 dark:divide-zinc-800">
                     {leaderboardData[activeTab].map((entry, index) => (
                       <tr key={index} className="group hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50 transition-colors">
-                        <td className="py-5 font-bold text-white">#{index + 1}</td>
-                        <td className="py-5">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-full bg-zinc-300 dark:bg-zinc-700 overflow-hidden flex items-center justify-center">
-                              <span className="text-xs font-bold">{entry.name.charAt(0)}</span>
+                        <td className="py-3 md:py-5 font-bold text-white">#{index + 1}</td>
+                        <td className="py-3 md:py-5">
+                          <div className="flex items-center gap-2 md:gap-3">
+                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-zinc-300 dark:bg-zinc-700 overflow-hidden flex items-center justify-center">
+                              <span className="text-[10px] md:text-xs font-bold">{entry.name.charAt(0)}</span>
                             </div>
-                            <span className="font-medium text-white">{entry.name}</span>
+                            <span className="font-medium text-white text-sm md:text-base">{entry.name}</span>
                           </div>
                         </td>
-                        <td className="py-5 text-right font-medium text-white">{entry.time}</td>
-                        <td className="py-5 text-right text-white">{entry.event}</td>
-                        <td className="py-5 text-right text-white">{entry.place}</td>
+                        <td className="py-3 md:py-5 text-right font-medium text-white text-sm md:text-base">{entry.time}</td>
+                        <td className="py-3 md:py-5 text-right text-white text-sm md:text-base hidden md:table-cell">{entry.event}</td>
+                        <td className="py-3 md:py-5 text-right text-white text-sm md:text-base hidden md:table-cell">{entry.place}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -313,14 +313,14 @@ src="/bannerPhotos/events-banner.jpg"
               </div>
 
               {/* Leaderboard Tabs */}
-              <div className="flex justify-center mt-8 gap-2">
+              <div className="flex flex-wrap justify-center mt-8 gap-1 sm:gap-2">
                 {(["5k", "10k", "halfMarathon", "marathon"] as LeaderboardTab[]).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-4 py-2 rounded transition-colors ${activeTab === tab ? "bg-primary-container text-on-primary-container font-bold border-2 border-secondary" : "bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest"}`}
+                    className={`px-2 sm:px-4 py-2 rounded transition-colors text-xs sm:text-sm ${activeTab === tab ? "bg-primary-container text-on-primary-container font-bold border-2 border-secondary" : "bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest"}`}
                   >
-                    {tab === "halfMarathon" ? "Half Marathon" : tab.toUpperCase()}
+                    {tab === "halfMarathon" ? "Half" : tab.toUpperCase()}
                   </button>
                 ))}
               </div>
