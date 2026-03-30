@@ -313,14 +313,14 @@ src="/bannerPhotos/events-banner.jpg"
               </div>
 
               {/* Leaderboard Tabs */}
-              <div className="flex justify-center mt-8 gap-2">
+              <div className="flex flex-wrap justify-center mt-8 gap-1 sm:gap-2">
                 {(["5k", "10k", "halfMarathon", "marathon"] as LeaderboardTab[]).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-4 py-2 rounded transition-colors ${activeTab === tab ? "bg-primary-container text-on-primary-container font-bold border-2 border-secondary" : "bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest"}`}
+                    className={`px-2 sm:px-4 py-2 rounded transition-colors text-xs sm:text-sm ${activeTab === tab ? "bg-primary-container text-on-primary-container font-bold border-2 border-secondary" : "bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest"}`}
                   >
-                    {tab === "halfMarathon" ? "Half Marathon" : tab.toUpperCase()}
+                    {tab === "halfMarathon" ? "Half" : tab.toUpperCase()}
                   </button>
                 ))}
               </div>
