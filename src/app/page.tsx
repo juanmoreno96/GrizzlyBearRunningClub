@@ -131,7 +131,7 @@ export default function Home() {
                               className="object-cover"
                             />
                           </div>
-                          <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-container p-8 flex items-center justify-center rounded-xl shadow-xl hidden md:flex">
+                          <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-32 h-32 md:w-48 md:h-48 bg-primary-container p-4 md:p-8 flex items-center justify-center rounded-xl shadow-xl">
                             <span className="font-headline text-white text-center text-xl font-bold">A Legacy in Motion</span>
                           </div>
                         </div>
