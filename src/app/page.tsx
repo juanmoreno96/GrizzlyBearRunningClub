@@ -173,7 +173,7 @@ export default function Home() {
                         <div className="aspect-[16/10] overflow-hidden relative">
                           <Image
                             src="/gallery/events/runningBearthreecasa5k.jpg"
-                            alt="Austin Marathon"
+                            alt="Marathon"
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-700"
                           />
@@ -181,10 +181,10 @@ export default function Home() {
                         <div className="p-8">
                           <div className="flex items-center gap-2 mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-                            <span className="font-label text-xs uppercase tracking-widest text-on-surface-variant">TBA</span>
+                            <span className="font-label text-xs uppercase tracking-widest text-on-surface-variant">December 4-6, 2026</span>
                           </div>
-                          <h3 className="font-headline text-2xl font-bold text-primary-container mb-4">Austin Marathon &apos;26</h3>
-                          <p className="text-on-surface-variant mb-6 line-clamp-2">Join the Grizzly pack as we take on the streets of the Texas capital. Full support stations provided.</p>
+                          <h3 className="font-headline text-2xl font-bold text-primary-container mb-4">San Antonio Marathon &apos;26</h3>
+                          <p className="text-on-surface-variant mb-6 line-clamp-2">Join the Grizzly pack as we take on the streets of the Historic San Antonio.</p>
                           <Link href="/events" className="text-primary font-bold font-label text-sm uppercase tracking-tighter hover:gap-4 transition-all flex items-center gap-2">
                             Event Details
                             <ArrowRight className="w-4 h-4" />
@@ -205,10 +205,10 @@ export default function Home() {
                         <div className="p-8">
                           <div className="flex items-center gap-2 mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
-                            <span className="font-label text-xs uppercase tracking-widest text-on-surface-variant">TBA</span>
+                            <span className="font-label text-xs uppercase tracking-widest text-on-surface-variant">Sep 5, 2026</span>
                           </div>
-                          <h3 className="font-headline text-2xl font-bold text-primary-container mb-4">Hill Country Trail Runs</h3>
-                          <p className="text-on-surface-variant mb-6 line-clamp-2">A three-part race series through the rugged hill country trails. All skill levels welcome.</p>
+                          <h3 className="font-headline text-2xl font-bold text-primary-container mb-4">Bear Country Nigh Trek</h3>
+                          <p className="text-on-surface-variant mb-6 line-clamp-2">A two day event in the beautiful trails of Waco Texas</p>
                           <Link href="/events" className="text-primary font-bold font-label text-sm uppercase tracking-tighter hover:gap-4 transition-all flex items-center gap-2">
                             Event Details
                             <ArrowRight className="w-4 h-4" />
@@ -229,10 +229,10 @@ export default function Home() {
                         <div className="p-8">
                           <div className="flex items-center gap-2 mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                            <span className="font-label text-xs uppercase tracking-widest text-on-surface-variant">TBA</span>
+                            <span className="font-label text-xs uppercase tracking-widest text-on-surface-variant">November 2026</span>
                           </div>
-                          <h3 className="font-headline text-2xl font-bold text-primary-container mb-4">Weekly Coffee Run</h3>
-                          <p className="text-on-surface-variant mb-6 line-clamp-2">The heart of our club. 5k social run followed by brew and banter at local partners.</p>
+                          <h3 className="font-headline text-2xl font-bold text-primary-container mb-4">Laredo Marathon</h3>
+                          <p className="text-on-surface-variant mb-6 line-clamp-2">Come join us for the Laredo Marathon for our second year in a row!</p>
                           <Link href="/events" className="text-primary font-bold font-label text-sm uppercase tracking-tighter hover:gap-4 transition-all flex items-center gap-2">
                             Event Details
                             <ArrowRight className="w-4 h-4" />
